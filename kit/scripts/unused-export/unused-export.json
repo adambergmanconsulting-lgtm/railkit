@@ -1,0 +1,7 @@
+{
+  "mode": "queued",
+  "tool": "knip",
+  "owner": "railkit-maintainer",
+  "due": "2026-10-15",
+  "notes": "Kit self-check: wire knip after foundation dogfood hosts stabilize. Hosts copy this file and set mode knip or refresh the clock."
+}

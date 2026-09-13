@@ -1,0 +1,7 @@
+{
+  "roots": ["scripts", "agents", "adapters"],
+  "extensions": [".js", ".ts", ".tsx", ".mjs", ".cjs"],
+  "warnLines": 400,
+  "maxLines": 800,
+  "ignore": ["node_modules/**"]
+}

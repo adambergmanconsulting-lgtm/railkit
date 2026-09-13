@@ -1,0 +1,19 @@
+{
+  "name": "railkit-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Railkit monorepo: governing framework (kit/) plus change-project business surface (project/)",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "check:railkit": "npm --prefix kit run check:railkit",
+    "check:documentation": "npm --prefix kit run check:documentation",
+    "check:documentation:ownership": "npm --prefix kit run check:documentation:ownership",
+    "check:architecture": "npm --prefix kit run check:architecture",
+    "check:architecture:ratchet": "npm --prefix kit run check:architecture:ratchet",
+    "check:unused-export": "npm --prefix kit run check:unused-export",
+    "check:first-host": "npm --prefix examples/first-host run check:railkit && npm --prefix examples/first-host run test:catalog",
+    "install:host": "npm --prefix kit run install:host"
+  }
+}

@@ -1,0 +1,35 @@
+# Railkit monorepo session rules
+
+Pick one intent from README.md (Start here by intent) or llm.txt. Do not assume code work.
+
+Before first edit: name the task in one sentence; open only that row's owner Fast path or named section. Re-open the right doc when blocked or the work shifts.
+
+## Compressed intent list
+
+- maintain governing framework -> kit/README.md
+- offer / USP / marketing / competition / consulting -> project/README.md
+- qualify host / decline / tokens / reps -> project/consulting/change-project-qualification.md
+- recommended agent setups -> project/consulting/recommended-agent-setups.md
+- privacy / legality (repo + agents) -> project/consulting/privacy-and-legality.md
+- kit implement / fix / refactor -> kit/AGENTS.md -> kit/docs/CANONICAL-SOURCES.md (one row)
+- adopt / priorities -> kit/docs/ADOPTION.md ; kit/docs/ops/governing-priorities.md ; skill priorities-review
+- engagement ranks / qualify / agents / privacy -> project/consulting/engagement-priorities.md ; skill engagement-review
+- install / adopt (change project playbooks) -> kit/docs/00-QUICK-START.md ; kit/docs/ADOPTION.md ; skill adopt
+- code-first / tribal to code -> kit/docs/CODE-FIRST.md
+- CI / merge -> kit/docs/ops/ci-flow.md ; skill ci-gate
+- layering -> kit/docs/engineering/architecture/application-layering.md + kit/docs/ops/code-quality-and-refactor.md ; skill layering-review
+- stability -> kit/docs/ops/ongoing-engineering-bar.md ; skill stability-review
+- UI review -> kit/docs/product/heuristics/ui-principles.md ; skill ui-review
+- fit (host templates) -> kit/docs/product/heuristics/customer-targets.md then customer-fit.md ; skill fit-review
+- doc review -> kit/docs/DOCUMENTATION-PRINCIPLES.md ; skill doc-review
+- offer / moat -> project/marketing/offer-model.md ; project/marketing/usp-moat.md
+
+## Standing constraints
+
+- Policy in kit/docs/ and kit/agents/skills/; adapters stay thin (kit/adapters/README.md).
+- Size budgets only get stricter; never raise ceilings to unblock.
+- Repeatable how = scripts, infra, workflows, skills (kit/docs/CODE-FIRST.md).
+- Plain text in kit docs and scripts (no emoji). Write plainly (kit/docs/DOCUMENTATION-PRINCIPLES.md#plain-language).
+- Hosts install kit/ only; never copy project/.
+- Agents: do must/should work without asking; stop only on kit/AGENTS.md stop allowlist. No “shall I?”. Rank 7 = dated queue + continue, not a soft skip.
+- Inspiration: sibling TeamResume for any Railkit work (kit OS and project surface). Prefer structure and Prefer/Avoid; do not paste TeamResume product pitch (CV/PDF/Matchability).

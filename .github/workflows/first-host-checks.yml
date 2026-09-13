@@ -1,0 +1,27 @@
+name: First-host checks
+
+on:
+  push:
+    paths:
+      - 'examples/first-host/**'
+      - 'kit/scripts/**'
+  pull_request:
+    paths:
+      - 'examples/first-host/**'
+      - 'kit/scripts/**'
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: examples/first-host
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Railkit gates on first-host
+        run: npm run check:railkit
+      - name: Catalog seam tests
+        run: npm run test:catalog
