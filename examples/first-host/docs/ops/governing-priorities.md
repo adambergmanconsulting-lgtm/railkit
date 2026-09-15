@@ -84,7 +84,7 @@ When two instruments conflict, name the deciding **rank** (same habit as UI prin
 - Adopt sequence: [ADOPTION.md](../ADOPTION.md)
 - Agent stop allowlist: [AGENTS.md](../../AGENTS.md#agent-stop-allowlist)
 - Skill: [priorities-review.md](../../agents/skills/priorities-review.md)
-- Chain example (TeamResume-shaped): [rank-chain-example.md](rank-chain-example.md)
+- Chain example: [rank-chain-example.md](rank-chain-example.md)
 - Testing instrument: [testing-bar.md](testing-bar.md)
 - Structure / trend instruments: [code-quality-and-refactor.md](code-quality-and-refactor.md)
 - Doc-structure ranks (separate yardstick): [DOCUMENTATION-PRINCIPLES.md](../DOCUMENTATION-PRINCIPLES.md)

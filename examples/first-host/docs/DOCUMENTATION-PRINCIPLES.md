@@ -5,8 +5,6 @@
 **Owns:** placement, structure ranks, session situating, why vs how, **plain-language Prefer/Avoid**.  
 **Does not own:** product jobs, pitch substance, stack-specific layering detail, UI microcopy ([product/heuristics/ui-naming.md](product/heuristics/ui-naming.md)).
 
-**Monorepo maintainers:** for doc-structure inspiration (and any other Railkit work), open sibling TeamResume first. Prefer structure and Prefer/Avoid; do not paste TeamResume product pitch. Hosts after install ignore this note.
-
 **Read path:** Structure → [Documentation structure](#documentation-structure). Prose → [Plain language](#plain-language). Situating → [Session discipline](#session-discipline). Code-first how → [CODE-FIRST.md](CODE-FIRST.md).
 
 ## Fast path (read first)

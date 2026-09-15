@@ -1,15 +1,15 @@
-# Rank chain example (TeamResume-shaped host)
+# Rank chain example (well-shaped host)
 
-**Purpose:** Walk all seven governing ranks on one coherent story. Pattern source: sibling **TeamResume** structure (intent router, CANONICAL, thin Cursor adapter, Knip hygiene, Azure/hosting as code). **Do not** paste TeamResume product pitch (CV/PDF/Matchability).
+**Purpose:** Walk all seven governing ranks on one coherent story. Composite host with intent router, CANONICAL, thin Cursor adapter, Knip hygiene, and hosting as code.
 
 **Yardstick:** [governing-priorities.md](governing-priorities.md) — [Why this order](governing-priorities.md#why-this-order-dependency-chain).  
 **Procedure:** [ADOPTION.md](../ADOPTION.md).
 
 ## Fast path (read first)
 
-- Fictional composite host “AcmeDocs” with TeamResume-*shaped* ops (monorepo, quality culture, dual homes — two docs both deciding the same thing — deploy steps only in chat/wiki).
+- Fictional composite host “AcmeDocs” with quality-culture ops (monorepo, dual homes — two docs both deciding the same thing — deploy steps only in chat/wiki).
 - Each section: rank → what holds → instrument (check/tool that serves a rank) → fail-if if inverted.
-- Not a claim that TeamResume was installed via Railkit; it is the **inspiration shape**.
+- Teaching sketch only — not a claim about any named external product.
 
 ## Host sketch
 

@@ -14,6 +14,7 @@
 | [`AGENTS.md`](../AGENTS.md) | Code-work read order | Implement / fix / refactor |
 | [`CANONICAL-SOURCES.md`](CANONICAL-SOURCES.md) | Task → one owner doc | After AGENTS.md |
 | [`CODE-FIRST.md`](CODE-FIRST.md) | Repeatable work → scripts/CI | Process or deploy how stuck in wiki |
+| [`WHY.md`](WHY.md) | Why apply this framework | Goal / means / hedge before treating rules as bureaucracy |
 | [`00-QUICK-START.md`](00-QUICK-START.md) | Install into a repo | First merge |
 | [`ADOPTION.md`](ADOPTION.md) | Bring a messy repo onto Railkit | Bootstrap / adopt |
 | [`DOCUMENTATION-PRINCIPLES.md`](DOCUMENTATION-PRINCIPLES.md) | How we write docs (structure + plain language) | Editing docs / doc-review |

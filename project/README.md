@@ -4,12 +4,11 @@
 
 **Prose:** Write commercial docs with the same plain-language Prefer/Avoid as [kit/docs/DOCUMENTATION-PRINCIPLES.md — Plain language](../kit/docs/DOCUMENTATION-PRINCIPLES.md#plain-language). Do not keep a second style guide here. Claims still need proof in `kit/` ([marketing/offer-model.md](marketing/offer-model.md)).
 
-**Inspiration (all Railkit work):** sibling TeamResume — docs, ops, skills patterns, marketing owners, consulting pointers. Prefer structure and Prefer/Avoid; do not paste TeamResume product pitch (CV/PDF/Matchability).
-
 ## Start here by intent
 
 | Intent | Open |
 |--------|------|
+| Why / causal chain | [marketing/why-railkit.md](marketing/why-railkit.md) |
 | Shareable overview | [digest.md](digest.md) |
 | Offer / framework vs change project | [marketing/offer-model.md](marketing/offer-model.md) |
 | USP and moat | [marketing/usp-moat.md](marketing/usp-moat.md) |

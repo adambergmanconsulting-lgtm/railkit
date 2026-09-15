@@ -1,7 +1,7 @@
 # Change-project qualification
 
 **Owns:** ideal hosts, decline / re-scope criteria, token heuristics, customer representatives, and messy-project archetypes for Railkit engagements.  
-**Does not own:** engagement ranks ([engagement-priorities.md](engagement-priorities.md)), commercial model ([../marketing/offer-model.md](../marketing/offer-model.md)), buyer one-pager ([../marketing/positioning.md](../marketing/positioning.md)), adopt sequence mechanics ([../../kit/docs/ADOPTION.md](../../kit/docs/ADOPTION.md)).
+**Does not own:** engagement ranks ([engagement-priorities.md](engagement-priorities.md)), commercial why-chain ([../marketing/why-railkit.md](../marketing/why-railkit.md)), commercial model ([../marketing/offer-model.md](../marketing/offer-model.md)), buyer one-pager ([../marketing/positioning.md](../marketing/positioning.md)), adopt sequence mechanics ([../../kit/docs/ADOPTION.md](../../kit/docs/ADOPTION.md)).
 
 **Placement:** consulting **instrument** (check/tool for a rank) of engagement Ranks **1**, **2**, **7**.
 
@@ -51,6 +51,8 @@ Strong change-project hosts usually have:
 
 ## Token spending (heuristics)
 
+Causal why (break-even bar, golden-application observation): [../marketing/why-railkit.md](../marketing/why-railkit.md). This section owns **phase** heuristics only.
+
 Tokens are mostly **situating tax** (cost of not opening the one right owner doc) and **rework from wrong owner**. Same tax hits every editor without owners. Size ratchets are **second-order** insurance (cheaper seam-local edits), not a claim that agents cannot edit large files. Kit breakpoints and touch rules: [code-quality-and-refactor.md — Size ratchets](../../kit/docs/ops/code-quality-and-refactor.md#size-ratchets-breakpoints-and-cost).
 
 | Phase | Token shape | What burns budget |
@@ -92,7 +94,7 @@ Need people who can **close** dual homes — not only give opinions.
 | Archetype | Tokens | Who must decide | Fit |
 |-----------|--------|-----------------|-----|
 | Startup, one repo, AI in use, docs chaos | Medium | Founder / tech lead | Ideal |
-| Product host with existing quality culture (TeamResume-like) | Medium-low | Eng lead | Ideal reference |
+| Product host with existing quality culture | Medium-low | Eng lead | Ideal reference |
 | Enterprise, strong CI, wiki-heavy process | Medium-high inventory | Platform + compliance | Good if CI writable |
 | Agency, many client repos | High per client unless productized | Client eng owner each time | Good for agency offer; client must own |
 | Monorepo, many packages, no router | High until umbrella intent table | Architect with mandate | Doable; scope N packages |

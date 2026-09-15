@@ -3,8 +3,6 @@
 **Owns:** consultancy vs package vs hybrid commercial model for Railkit.  
 **Does not own:** USP wording ([usp-moat.md](usp-moat.md)), competitor rows ([../competition/landscape.md](../competition/landscape.md)), host-product fit templates under `kit/docs/product/`, host qualification ([../consulting/change-project-qualification.md](../consulting/change-project-qualification.md)), engagement ranks ([../consulting/engagement-priorities.md](../consulting/engagement-priorities.md)).
 
-Inspiration: sibling TeamResume for any related pattern (docs, ops, skills, marketing owners). Prefer structure; do not paste TeamResume product pitch.
-
 ## Fast path (read first)
 
 1. Buyer / Primary job: [positioning.md](positioning.md).

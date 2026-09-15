@@ -5,10 +5,14 @@
 
 **Problem:** AI coding tools without shared rules of work waste time. People open the wrong docs, copy policy into editor-only dumps, and loosen quality bars under deadline pressure. Wiki playbooks and one-off cleanups do not stick.
 
+**Why:** Railkit is a governing framework plus a change project **applied to** a product host — so editors stay productive inside a practical tool-cost budget, without burning sessions on the wrong docs. Full chain: [project/marketing/why-railkit.md](project/marketing/why-railkit.md). Hosts after install: [kit/docs/WHY.md](kit/docs/WHY.md).
+
+**Stack:** No hard language lock-in ([qualification](project/consulting/change-project-qualification.md)). Shipped kit scripts and dogfood default to **JS/TS (npm)**; ideal unused-export depth uses Knip or a language equivalent.
+
 **Railkit has two parts:**
 
-1. **Change project** — bring a codebase up to speed in a fixed order: document owners and file-size budgets first, then a working loop, then ideal checks (including unused-export / Knip-class) shipped or deferred with an owner and due date.
-2. **Governing framework** — what stays in the customer repo: one start-here table, one deciding doc per task, skills, thin editor adapters, and mechanical checks. Every editor (person or agent) keeps pushing coherence, efficiency, clarity, and quality. Agents do the work without “shall I?”; humans decide Prefer/Avoid forks.
+1. **Change project** — bring a codebase up to speed in a fixed order: named document owners and file-size budgets first, then a working loop, then ideal automated checks (including unused exports). Everything ships or sits on a dated queue with an owner and due date.
+2. **Governing framework** — what stays in the customer repo: one start-here table, one deciding doc per task, skills, thin editor adapters, and mechanical checks. Every editor (person or agent) keeps pushing coherence, efficiency, clarity, and quality. Agents do must/should work without “shall I?”; humans decide Prefer/Avoid forks.
 
 Same rules for humans and agents. The customer keeps the framework after the engagement.
 
@@ -35,15 +39,10 @@ Same rules for humans and agents. The customer keeps the framework after the eng
 
 | Intent | Open |
 |--------|------|
+| Why / causal chain (commercial) | [project/marketing/why-railkit.md](project/marketing/why-railkit.md) |
 | Customer-facing kit hub (what hosts keep) | [kit/README.md](kit/README.md) |
 | Edit governing framework (docs, skills, scripts) | [kit/README.md](kit/README.md) → one intent row |
 | Offer / USP / marketing / competition / consulting | [project/README.md](project/README.md) |
 | Adopt / governing priorities | [kit/docs/ADOPTION.md](kit/docs/ADOPTION.md) · [kit/docs/ops/governing-priorities.md](kit/docs/ops/governing-priorities.md) |
 | First dogfood host | [examples/first-host/](examples/first-host/) · [adopt-receipt](examples/first-host/docs/ops/adopt-receipt.md) |
 | Run kit gates | `npm run check:railkit` |
-
-**Inspiration:** for any Railkit work, open sibling **TeamResume** first (patterns only; no CV product pitch).
-
-```bash
-npm run check:railkit
-```

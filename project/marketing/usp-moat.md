@@ -1,16 +1,21 @@
 # USP and moat
 
 **Owns:** category, we-are / we-are-not, USP pillars, do-not-claim for Railkit commercial claims.  
-**Does not own:** offer model ([offer-model.md](offer-model.md)), competitor matrix ([../competition/landscape.md](../competition/landscape.md)).
+**Does not own:** full why-chain ([why-railkit.md](why-railkit.md); host [../../kit/docs/WHY.md](../../kit/docs/WHY.md)), offer model ([offer-model.md](offer-model.md)), competitor matrix ([../competition/landscape.md](../competition/landscape.md)).
 
-Pattern source: sibling TeamResume (positioning Category + do-not-claim, and any related ops/docs patterns). Claims must match shipped behavior under `kit/`. Do not paste TeamResume product pitch.
+Claims must match shipped behavior under `kit/`.
 
 ## Fast path (read first)
 
 - Category and we-are / we-are-not.
+- Why (causal chain): [why-railkit.md](why-railkit.md); hosts: [../../kit/docs/WHY.md](../../kit/docs/WHY.md).
 - Pillars only if proven in `kit/`.
 - [Do not claim](#do-not-claim).
 - Offer: [offer-model.md](offer-model.md).
+
+## Why it works
+
+Railkit is a **meta** framework applied to product hosts. Goal → means → hedge (break-even bar, text-first sized normalized repo, human/org win without agents): [why-railkit.md](why-railkit.md). Host-safe mechanism only: [../../kit/docs/WHY.md](../../kit/docs/WHY.md). Do not restate the arithmetic here.
 
 ## Category
 
@@ -40,8 +45,9 @@ Pattern source: sibling TeamResume (positioning Category + do-not-claim, and any
 | Durable | Not the moat |
 |---------|----------------|
 | Sequenced trend gates + change-project loop + Prefer/Avoid that compounds when you touch real product work | Skills or markdown without doc/size foundation |
+| Actor-agnostic repo shape (reachable text, sized seams, one owner) that remains valuable if agents change or are declined | Value that only works while one IDE or model is fashionable |
 | Leaving the governing framework in the customer's repo | Value trapped only in consultancy hours |
-| Reference implementation pressure (TeamResume sibling patterns, including Knip hygiene) + first install dogfood ([examples/first-host](../../examples/first-host/)) | Generic prompt libraries or always-on 400-line dumps |
+| Reference implementation pressure (dogfood + Knip-class hygiene) via [examples/first-host](../../examples/first-host/) | Generic prompt libraries or always-on 400-line dumps |
 
 **Services edge:** guided change project and first on-contact fix. Still leaves `kit/` in-repo so the framework is not trapped in the consultancy ([offer-model.md](offer-model.md)).
 
@@ -56,7 +62,9 @@ Pattern source: sibling TeamResume (positioning Category + do-not-claim, and any
 - That every ideal gate must be green on day one of the change project (foundation first; ideal may be on a **dated queue**, not soft-skipped).
 - Zero human decisions forever / hands-off agents with no heuristic forks (stop allowlist still pauses for Prefer/Avoid conflicts and dual homes).
 - SOC 2 / market leadership / customer counts (unset).
-- TeamResume product outcomes (CV/PDF/Matchability) as Railkit outcomes.
+- Lab-measured productivity % for every host; guaranteed 2–4× lift for every customer (golden-application 2–4×+ is informal observation only — [why-railkit.md](why-railkit.md)).
+- Guaranteed stay-under ~USD 200/mo tool spend; illustration salary (e.g. Nordic USD 5–6k/mo loaded) as a universal fact.
+- Another product’s outcomes or brand as Railkit outcomes.
 - That the framework is an "operating system" in the OS sense.
 - That installing Railkit makes the customer GDPR/AI-Act “compliant.”
 - That Cursor/Copilot/Claude (or any named tool) meet the customer’s legal bar by default.

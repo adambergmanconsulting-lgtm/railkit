@@ -45,7 +45,7 @@ Scores are relative (1–5, higher is better for that criterion on a Railkit-sha
 | Cost | Seat + model usage; control by **model tier by task** (below) |
 | CI | Local `check:railkit` / host umbrella still required |
 
-**Best for:** change-project facilitation and ongoing product hosts already using Cursor (including TeamResume-like shops).
+**Best for:** change-project facilitation and ongoing product hosts already using Cursor.
 
 ### Rank 2 — CLI coding agent (e.g. Claude Code) + markdown entry
 

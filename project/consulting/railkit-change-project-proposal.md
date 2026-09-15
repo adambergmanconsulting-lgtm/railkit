@@ -30,7 +30,7 @@ Two parts:
    - Ideal trend gates — unused-export / dead-module (Knip or language equivalent) on the same local+CI umbrella
    - Code-first — scripts, contracts, workflows, and skills own repeatable how
 
-Reference patterns originate in the sibling TeamResume repo; Railkit generalizes them for any host. Standing rule: for any Railkit work, read TeamResume for structure and Prefer/Avoid — not CV product pitch.
+Why (goal → means → hedge): [../marketing/why-railkit.md](../marketing/why-railkit.md).
 
 ## Deliverables
 

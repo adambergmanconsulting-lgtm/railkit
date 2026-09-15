@@ -6,6 +6,7 @@ Session: pick one intent. Name the task in one sentence. Open only that owner Fa
 
 - maintain governing framework -> kit/README.md
 - offer / USP / marketing / competition / consulting -> project/README.md
+- why / causal chain -> project/marketing/why-railkit.md ; hosts -> kit/docs/WHY.md
 - qualify host / decline / tokens / reps -> project/consulting/change-project-qualification.md
 - recommended agent setups -> project/consulting/recommended-agent-setups.md
 - privacy / legality (repo + agents) -> project/consulting/privacy-and-legality.md
@@ -14,7 +15,5 @@ Session: pick one intent. Name the task in one sentence. Open only that owner Fa
 - engagement ranks / qualify / agents / privacy -> project/consulting/engagement-priorities.md ; skill engagement-review
 - install / adopt (change project playbooks) -> kit/docs/00-QUICK-START.md ; kit/docs/ADOPTION.md ; skill adopt
 - checks -> npm run check:railkit
-
-Inspiration: sibling TeamResume for any Railkit work (kit and project). Patterns only; no CV product pitch.
 
 Kit policy lives in kit/docs/ and kit/agents/skills/. Adapters stay thin. Size budgets only get stricter. Hosts install kit/ only; never project/. Agents do must/should work without asking; stop only on kit/AGENTS.md stop allowlist. Rank 7 = dated queue (owner + due date), not a soft skip. Write plainly (kit/docs/DOCUMENTATION-PRINCIPLES.md#plain-language).

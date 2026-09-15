@@ -38,5 +38,3 @@ If an agent is editing: **do the work** — fix must/should issues, run skills a
 ## Kit maintenance
 
 When changing Railkit itself: same situating rules; keep adapters thin ([adapters/README.md](adapters/README.md)); Prefer/Avoid stay in owner docs, not in Cursor frontmatter.
-
-**Inspiration (monorepo maintainers):** for kit changes, open sibling TeamResume first for patterns. Prefer structure and Prefer/Avoid; do not paste TeamResume product pitch. Hosts after adopt ignore this note.

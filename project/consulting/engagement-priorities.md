@@ -26,7 +26,7 @@ Qualification, agent scorecards, and privacy notes drift into peer “must lists
 | **3** | Repo is the artifact | Policy and gates live in their git; thin tool adapters | Value trapped in consultant chat or vendor-only rules |
 | **4** | Named egress | Repo vs agent-vendor data paths stated honestly | “AI-safe” / GDPR-by-install claims |
 | **5** | Agent setup serves situating | Tooling ranked by framework fit (**situating** = open the one right owner doc); CI gates non-negotiable | Speed/cost wins that break owners or merge bars |
-| **6** | Claims match kit | Pitch and proposal only claim shipped instruments | OS slogans; SOC2 theater; TeamResume product outcomes as Railkit |
+| **6** | Claims match kit | Pitch and proposal only claim shipped instruments | OS slogans; SOC2 theater; another product’s outcomes as Railkit |
 | **7** | Fit commercial depth | Queue ideal adopt instruments; phase multi-repo | Fake every gate green day one **or** skip Rank 1–2 to close a deal |
 
 ## Consequences (not peer goals)

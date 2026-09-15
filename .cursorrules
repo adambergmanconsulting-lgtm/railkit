@@ -8,6 +8,7 @@ Before first edit: name the task in one sentence; open only that row's owner Fas
 
 - maintain governing framework -> kit/README.md
 - offer / USP / marketing / competition / consulting -> project/README.md
+- why / causal chain -> project/marketing/why-railkit.md ; hosts -> kit/docs/WHY.md
 - qualify host / decline / tokens / reps -> project/consulting/change-project-qualification.md
 - recommended agent setups -> project/consulting/recommended-agent-setups.md
 - privacy / legality (repo + agents) -> project/consulting/privacy-and-legality.md
@@ -32,4 +33,3 @@ Before first edit: name the task in one sentence; open only that row's owner Fas
 - Plain text in kit docs and scripts (no emoji). Write plainly (kit/docs/DOCUMENTATION-PRINCIPLES.md#plain-language).
 - Hosts install kit/ only; never copy project/.
 - Agents: do must/should work without asking; stop only on kit/AGENTS.md stop allowlist. No “shall I?”. Rank 7 = dated queue + continue, not a soft skip.
-- Inspiration: sibling TeamResume for any Railkit work (kit OS and project surface). Prefer structure and Prefer/Avoid; do not paste TeamResume product pitch (CV/PDF/Matchability).

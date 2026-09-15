@@ -4,7 +4,7 @@
 
 ## Locked offer (one-liner)
 
-**Governing framework + change project:** fixed adopt sequence. Put document owners and file-size **ratchets** (budgets that only tighten) first. Ship ideal Knip-class gates or put them on a **dated queue** (named owner + due date). Agents auto-run must/should and stop only on heuristic forks / approach conflicts. Customer keeps `kit/`. Decide: [marketing/offer-model.md](marketing/offer-model.md). USP/moat: [marketing/usp-moat.md](marketing/usp-moat.md). Sequence: [kit/docs/ADOPTION.md](../kit/docs/ADOPTION.md#correct-sequence).
+**Governing framework + change project:** fixed adopt sequence. Put document owners and file-size **ratchets** (budgets that only tighten) first. Ship ideal Knip-class gates or put them on a **dated queue** (named owner + due date). Agents auto-run must/should and stop only on heuristic forks / approach conflicts. Customer keeps `kit/`. Why (goal → means → hedge): [marketing/why-railkit.md](marketing/why-railkit.md). Decide: [marketing/offer-model.md](marketing/offer-model.md). USP/moat: [marketing/usp-moat.md](marketing/usp-moat.md). Sequence: [kit/docs/ADOPTION.md](../kit/docs/ADOPTION.md#correct-sequence).
 
 ## One paragraph
 
@@ -40,7 +40,7 @@ An **instrument** here is a check or tool that serves a priority rank. Yardstick
 
 **Never** treat Knip-class as day-one peer to document owners. **Never** leave an ideal instrument without a due date.
 
-Seven-link walkthrough (TeamResume-shaped): [kit/docs/ops/rank-chain-example.md](../kit/docs/ops/rank-chain-example.md). Host governing ranks are **not** the same as doc-structure ranks or engagement ranks.
+Seven-link walkthrough: [kit/docs/ops/rank-chain-example.md](../kit/docs/ops/rank-chain-example.md). Host governing ranks are **not** the same as doc-structure ranks or engagement ranks.
 
 ## Engagement
 

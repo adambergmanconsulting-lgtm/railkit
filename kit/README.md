@@ -2,7 +2,14 @@
 
 **Who this page is for:** people editing **this repo** after install (humans and agents). This folder is the installable framework only. Offer and sales docs live in the Railkit monorepo `project/` tree and are **not** copied here.
 
-**What you have:** Shared rules of work so every editor opens the right owner doc, keeps repeatable how in scripts and skills, refuses checks that quietly loosen, and improves structure when touching real work — toward coherence, efficiency, clarity, and quality. Not a product clone. Not locked to one editor.
+**What you have:** shared rules of work so every editor (human or agent) can:
+
+- Open the one right owner doc before editing
+- Keep repeatable how in scripts and skills
+- Refuse checks that quietly loosen
+- Improve structure when touching real product work
+
+Toward coherence, efficiency, clarity, and quality. Why this shape: [docs/WHY.md](docs/WHY.md). Not a product clone. Not locked to one editor.
 
 Plain-language rules: [docs/DOCUMENTATION-PRINCIPLES.md — Plain language](docs/DOCUMENTATION-PRINCIPLES.md#plain-language).
 
@@ -10,6 +17,7 @@ Plain-language rules: [docs/DOCUMENTATION-PRINCIPLES.md — Plain language](docs
 
 | Intent | Open |
 |--------|------|
+| Why this framework | [docs/WHY.md](docs/WHY.md) |
 | Install / merge this framework into a repo | [docs/00-QUICK-START.md](docs/00-QUICK-START.md) |
 | Bootstrap / adopt (fill owners, size budgets, working loop) | [docs/ADOPTION.md](docs/ADOPTION.md) + skill `adopt` |
 | Implement / fix / refactor | [AGENTS.md](AGENTS.md) → [docs/CANONICAL-SOURCES.md](docs/CANONICAL-SOURCES.md) (one row) |
@@ -26,7 +34,7 @@ Plain-language rules: [docs/DOCUMENTATION-PRINCIPLES.md — Plain language](docs
 | Agent skills (any editor) | [agents/README.md](agents/README.md) |
 | Editor adapters | [adapters/README.md](adapters/README.md) |
 
-**Session start:** pick one row. Do not assume code work. Before first edit: name the task in one sentence; open only that row's owner Fast path or named section. Re-open the right doc when blocked or the work shifts.
+**Before first edit:** name the task in one sentence. Pick **one** intent row above; open only that owner’s Fast path or named section. Do not assume the job is code work. If you are blocked or the seam shifts, return here and open the right row.
 
 ## Layers
 
@@ -43,4 +51,4 @@ Plain-language rules: [docs/DOCUMENTATION-PRINCIPLES.md — Plain language](docs
 npm run check:railkit
 ```
 
-Wire the same script in CI ([docs/ops/ci-flow.md](docs/ops/ci-flow.md)). Rank **7** unused-export: `npm run check:unused-export` when configured.
+Wire the same script in CI ([docs/ops/ci-flow.md](docs/ops/ci-flow.md)). Ideal depth (governing Rank **7** — dated unused-export / Knip-class when ready): `npm run check:unused-export` when configured. Rank order: [docs/ops/governing-priorities.md](docs/ops/governing-priorities.md).

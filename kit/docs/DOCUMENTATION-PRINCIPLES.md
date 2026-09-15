@@ -3,11 +3,9 @@
 **Meta** — Keep docs small, stable, and cheap to load in sessions.
 
 **Owns:** placement, structure ranks, session situating, why vs how, **plain-language Prefer/Avoid**.  
-**Does not own:** product jobs, pitch substance, stack-specific layering detail, UI microcopy ([product/heuristics/ui-naming.md](product/heuristics/ui-naming.md)).
+**Does not own:** why apply the framework ([WHY.md](WHY.md)), product jobs, pitch substance, stack-specific layering detail, UI microcopy ([product/heuristics/ui-naming.md](product/heuristics/ui-naming.md)).
 
-**Monorepo maintainers:** for doc-structure inspiration (and any other Railkit work), open sibling TeamResume first. Prefer structure and Prefer/Avoid; do not paste TeamResume product pitch. Hosts after install ignore this note.
-
-**Read path:** Structure → [Documentation structure](#documentation-structure). Prose → [Plain language](#plain-language). Situating → [Session discipline](#session-discipline). Code-first how → [CODE-FIRST.md](CODE-FIRST.md).
+**Read path:** Structure → [Documentation structure](#documentation-structure). Prose → [Plain language](#plain-language). Situating → [Session discipline](#session-discipline). Why apply → [WHY.md](WHY.md). Code-first how → [CODE-FIRST.md](CODE-FIRST.md).
 
 ## Fast path (read first)
 
@@ -26,6 +24,7 @@
 | Ops guides + governing priority ranks | `docs/ops/` |
 | How we write docs | This file |
 | Code-first principle | [CODE-FIRST.md](CODE-FIRST.md) |
+| Why apply this framework | [WHY.md](WHY.md) |
 | CI / script inputs (JSON) | Next to consumer under `scripts/` or `infra/` — not under `docs/` |
 | Railkit offer / marketing / competition / consulting / engagement qualification | Sibling monorepo `project/` (not installed into hosts) |
 
