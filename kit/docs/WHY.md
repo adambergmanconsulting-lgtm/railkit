@@ -7,7 +7,7 @@
 
 ## Fast path (read first)
 
-1. **Goal:** every editor (human or agent) stays productive inside a practical tool-cost and attention budget. Clear the host’s **break-even bar** (`tool cost / labor cost`) instead of burning the subscription on situating and rework tax.
+1. **Goal:** every editor (human or agent) stays productive inside a practical tool-cost and attention budget. Clear the host’s **break-even bar** (`tool cost / labor cost`) instead of burning the subscription on **situating** (not opening the one right owner doc) and rework tax.
 2. **Means:** project truth reachable as text in the repo; seams small enough for cheaper models; one deciding owner per concept — see [Means](#means).
 3. **Hedge:** the same shape helps humans and the organization if agents are declined or models change (**actor-agnostic** = same rules for humans and agents).
 4. **Fail if:** rules are followed with no link to this goal, or size ceilings are raised “to unblock” agents.

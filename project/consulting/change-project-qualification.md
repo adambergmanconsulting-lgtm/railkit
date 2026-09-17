@@ -1,7 +1,7 @@
 # Change-project qualification
 
-**Owns:** ideal hosts, decline / re-scope criteria, token heuristics, customer representatives, and messy-project archetypes for Railkit engagements.  
-**Does not own:** engagement ranks ([engagement-priorities.md](engagement-priorities.md)), commercial why-chain ([../marketing/why-railkit.md](../marketing/why-railkit.md)), commercial model ([../marketing/offer-model.md](../marketing/offer-model.md)), buyer one-pager ([../marketing/positioning.md](../marketing/positioning.md)), adopt sequence mechanics ([../../kit/docs/ADOPTION.md](../../kit/docs/ADOPTION.md)).
+**Owns:** ideal hosts; decline / re-scope; **Customer brings**; token heuristics; customer representatives; messy-project archetypes.  
+**Does not own:** engagement ranks ([engagement-priorities.md](engagement-priorities.md)), break-even arithmetic ([../marketing/why-railkit.md](../marketing/why-railkit.md)), host mechanism ([../../kit/docs/WHY.md](../../kit/docs/WHY.md)), commercial model / You–we–exit ([../marketing/offer-model.md](../marketing/offer-model.md)), buyer one-pager ([../marketing/positioning.md](../marketing/positioning.md)), adopt sequence mechanics ([../../kit/docs/ADOPTION.md](../../kit/docs/ADOPTION.md)).
 
 **Placement:** consulting **instrument** (check/tool for a rank) of engagement Ranks **1**, **2**, **7**.
 
@@ -9,13 +9,30 @@
 
 - Engagement yardstick: [engagement-priorities.md](engagement-priorities.md) ; skill `engagement-review`.
 - **Go / no-go:** [Hard filters](#hard-filters-go--conditional--no-go).
+- **Customer brings:** [Customer brings](#customer-brings).
 - **Ideal host:** [Ideal project](#ideal-project).
 - **Unsuitable for this offer:** [Cannot take with this offer](#cannot-take-with-this-offer).
 - **Who decides incoherence:** [Customer representatives](#customer-representatives).
+- Commercial You / we / exit: [../marketing/offer-model.md](../marketing/offer-model.md#you--we--exit).
 - Host priority ranks: [../../kit/docs/ops/governing-priorities.md](../../kit/docs/ops/governing-priorities.md).
 - Adopt order: [ADOPTION.md](../../kit/docs/ADOPTION.md#correct-sequence).
 
 There is **no hard language/stack exclusion list**. Filters are organizational, access, and offer-fit.
+
+## Customer brings
+
+What the host must staff and accept for a **Go**. Commercial card: [../marketing/offer-model.md](../marketing/offer-model.md#you--we--exit).
+
+| Must bring | Fail if missing |
+|------------|-----------------|
+| Named decider who can close dual homes on a short clock | Foundation never exits; dual homes stay dual |
+| Repo access + CI or merge-policy leverage | Trend gates never bind |
+| Active delivery seam this week | On-contact win is theater |
+| Accept leaving `kit/` in git; refuse raising ceilings to unblock | Offer fit fails (sell something else) |
+| Eng time on the seam (product when journeys conflict) | Expert invents canon the host will not own |
+| Security/compliance when deploy/secrets are tribal (as needed) | Tribal → code blocks without an egress decision |
+
+Roles that close decisions: [Customer representatives](#customer-representatives).
 
 ## Ideal project
 

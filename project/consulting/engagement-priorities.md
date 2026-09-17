@@ -10,18 +10,19 @@
 
 - Conflicts: [Ranked priorities](#ranked-priorities) — higher wins.
 - Consulting docs are **instruments** — [Consequences](#consequences-not-peer-goals).
+- **Pitch surface:** [Pitch surface Prefer / Avoid](#pitch-surface-prefer--avoid) — fail if sell/buyer/bring/exit are unclear on hubs; pushback = edit Prefer/Avoid (confirm), not silent ignore.
 - Host depth still follows kit [governing-priorities.md](../../kit/docs/ops/governing-priorities.md); do not invent a second host yardstick here.
-- Skill: `engagement-review`.
+- Skill: `engagement-review`. Yardstick pushback: [DOCUMENTATION-PRINCIPLES.md — Self-improving loop](../../kit/docs/DOCUMENTATION-PRINCIPLES.md#self-improving-loop).
 
 ## Why
 
-Qualification, agent scorecards, and privacy notes drift into peer “must lists.” Engagement needs the same shape as the kit: ranks first, checklists as consequences, Rank **7** depth on a **dated queue** (owner + due date) without lying.
+Qualification, agent scorecards, and privacy notes drift into peer “must lists.” Engagement needs the same shape as the kit: ranks first, checklists as consequences, Rank **7** depth on a **dated queue** (owner + due date) without lying. Pitch and hub docs drift the same way: tool economics crowd out the **priced change project**, and buyers cannot find what they must bring.
 
 ## Ranked priorities
 
 | Rank | Principle | Means in one line | Fail if… |
 |------|-----------|-------------------|----------|
-| **1** | Honest offer fit | Only take hosts that keep the framework and accept the change-project shape | Rules-dump / deck-only / no-CI leverage sold as Railkit |
+| **1** | Honest offer fit | Only take hosts that keep the framework and accept the change-project shape; SKU = priced change project (expert + kit), not editor seats | Rules-dump / deck-only / no-CI leverage / AI-seat sale sold as Railkit |
 | **2** | Decision rights | Named decider can close **dual homes** (two deciding docs for one thing) on a clock | Infinite stakeholder workshops; foundation never exits |
 | **3** | Repo is the artifact | Policy and gates live in their git; thin tool adapters | Value trapped in consultant chat or vendor-only rules |
 | **4** | Named egress | Repo vs agent-vendor data paths stated honestly | “AI-safe” / GDPR-by-install claims |
@@ -33,14 +34,36 @@ Qualification, agent scorecards, and privacy notes drift into peer “must lists
 
 | Instrument | Serves rank(s) | Owner doc |
 |------------|----------------|-----------|
-| Go / no-go, tokens, reps, archetypes | **1**, **2**, **7** | [change-project-qualification.md](change-project-qualification.md) |
-| Hybrid offer lock | **1**, **3**, **6** | [../marketing/offer-model.md](../marketing/offer-model.md) |
-| Positioning / who | **1**, **6** | [../marketing/positioning.md](../marketing/positioning.md) |
+| Go / no-go, customer brings, tokens, reps, archetypes | **1**, **2**, **7** | [change-project-qualification.md](change-project-qualification.md) |
+| Hybrid offer lock; You / we / exit; phase timebox | **1**, **3**, **6** | [../marketing/offer-model.md](../marketing/offer-model.md) |
+| Positioning / who / 60s pitch | **1**, **6** | [../marketing/positioning.md](../marketing/positioning.md) |
 | USP / do-not-claim | **4**, **6** | [../marketing/usp-moat.md](../marketing/usp-moat.md) |
 | Agent setup scorecard | **3**, **5**, **7** | [recommended-agent-setups.md](recommended-agent-setups.md) |
 | Repo + agent privacy | **4**, **5** | [privacy-and-legality.md](privacy-and-legality.md) |
 | Proposal narrative | **1**, **6**, **7** | [railkit-change-project-proposal.md](railkit-change-project-proposal.md) |
 | Host adopt / tests / CI | Host Ranks 1–7 | [governing-priorities.md](../../kit/docs/ops/governing-priorities.md) |
+
+## Pitch surface Prefer / Avoid
+
+**Owns:** when commercial docs and hubs are good enough to sell without a manual push. Instruments: positioning, offer-model, qualification, proposal, monorepo + `project/` READMEs. Skill: `engagement-review`.
+
+| Prefer | Avoid |
+|--------|--------|
+| Name the **SKU** first: priced change project (expert + kit left behind) | Leading with Cursor/tool subscriptions as if that is what we sell |
+| State **purpose and value** of the kit vs the change project in plain words for **buyer and seller** before mechanics | Process-only pitch (ratchets, ranks) with no “why pay / why keep” |
+| State the **business-owner spend case**: leak is waste/rework; instead of seats / rules dump / staff-aug; kit stays in their git | Eng-only pitch with no fund/sponsor path |
+| Default **primary buyer** = eng / platform owner; variants named as variants | Three segments with equal weight and no default |
+| **You / we / exit** on the offer owner; **Customer brings** on qualification | Deliverables only on our side; customer obligations buried |
+| Engagement **success** = foundation + working-loop exit + proof on behavior moves | Guaranteed productivity % or tool-spend ceiling as the done bar |
+| Monorepo `README.md` and `project/README.md` **route** sell / buyer / value / business-owner / pitch / why-pay / customer-brings / you–we–exit / privacy / proposal | Hubs that only list files; pitch answers only in chat |
+| Privacy one-liner early: kit in their git; agent egress separate | GDPR-by-install or silence on vendor egress |
+| Spoken **60-second pitch** on positioning | Jargon-first open (Knip, Rank 7) before the deal |
+
+**Fail if (must):** commercial hub or offer surface implies we sell AI-editor seats; no route from monorepo or `project/` README to sell / buyer / customer-brings / you–we–exit; claims that violate [usp-moat.md](../marketing/usp-moat.md#do-not-claim).  
+**Should:** missing 60s pitch, missing privacy one-liner on positioning, primary buyer not marked default, phases/exit only in ADOPTION with no commercial pointer, missing plain buyer/seller value of kit vs change project, missing business-owner / instead-of stanza.  
+**Defer:** fixed catalog price or fixed week counts (per engagement after qualify).
+
+**Pushback:** if a Prefer/Avoid row blocks a coherent commercial job (e.g. a new segment must be primary, or a hub route is wrong), do not paper over it in the pitch. Numbered fork: (1) keep Prefer/Avoid and fix docs, or (2) edit this table / engagement Rank fail-if (confirm) then align docs. Shared loop: [DOCUMENTATION-PRINCIPLES.md — Self-improving loop](../../kit/docs/DOCUMENTATION-PRINCIPLES.md#self-improving-loop).
 
 ## Customer adjustment (engagement)
 

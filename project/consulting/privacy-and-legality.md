@@ -6,6 +6,7 @@
 ## Fast path (read first)
 
 - Engagement Rank **4** (named egress): [engagement-priorities.md](engagement-priorities.md).
+- **Pitch one-liner:** kit stays in the customer’s git; agent/model vendors are a separate egress — name it; do not claim install = compliant ([../marketing/positioning.md](../marketing/positioning.md#privacy-one-line-then-stop)).
 - Separate [what stays in the repo vs what agents send out](#what-stays-in-the-repo-vs-what-agents-send-out).
 - [Repo controls](#repo-controls) · [Agent controls](#agent-controls).
 - [Prefer / Avoid](#prefer--avoid) · [Discovery checklist](#discovery-checklist).

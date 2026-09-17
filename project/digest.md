@@ -1,23 +1,36 @@
 # Railkit digest
 
+**Layer:** human aggregate (**cache**) — not a source of truth. Refresh when offer, USP, why, positioning, or adopt sequence owners change.  
 **Purpose:** Shareable overview for consulting scoping and proposals. Not an implementation guide. Kit code work: [kit/AGENTS.md](../kit/AGENTS.md) → [kit/docs/CANONICAL-SOURCES.md](../kit/docs/CANONICAL-SOURCES.md).
 
 ## Locked offer (one-liner)
 
-**Governing framework + change project:** fixed adopt sequence. Put document owners and file-size **ratchets** (budgets that only tighten) first. Ship ideal Knip-class gates or put them on a **dated queue** (named owner + due date). Agents auto-run must/should and stop only on heuristic forks / approach conflicts. Customer keeps `kit/`. Why (goal → means → hedge): [marketing/why-railkit.md](marketing/why-railkit.md). Decide: [marketing/offer-model.md](marketing/offer-model.md). USP/moat: [marketing/usp-moat.md](marketing/usp-moat.md). Sequence: [kit/docs/ADOPTION.md](../kit/docs/ADOPTION.md#correct-sequence).
+**SKU = priced change project** (human expert + installable kit left in the host). Not an AI-editor sale. Customer keeps `kit/`. Spoken pitch: [marketing/positioning.md](marketing/positioning.md#60-second-pitch). You / we / exit: [marketing/offer-model.md](marketing/offer-model.md#you--we--exit). Customer brings: [consulting/change-project-qualification.md](consulting/change-project-qualification.md#customer-brings). Mechanism: [../kit/docs/WHY.md](../kit/docs/WHY.md). Break-even context: [marketing/why-railkit.md](marketing/why-railkit.md). USP: [marketing/usp-moat.md](marketing/usp-moat.md). Sequence: [kit/docs/ADOPTION.md](../kit/docs/ADOPTION.md#correct-sequence).
 
 ## One paragraph
 
-Railkit installs a governing framework into a host repo. That includes intent routing, one deciding owner per task, thin editor adapters, tighten-only checks, layering Prefer/Avoid, UI and fit heuristic templates, skills, and code-first scripts and contracts. Delivery is a change project with a **correct sequence**: foundation (owners + size ratchets), working loop (tribal inventory + on-contact win), then ideal gates shipped or **dated-queued** (not soft-skipped). Agents auto-run the loop. Humans decide Prefer/Avoid forks and unsolvable approach conflicts. The same path applies to every editor of the repo.
+**Buyer:** you pay for a transformation that puts rules of work in your repo and proves them on a real seam; you keep the kit so AI tools and people stop burning time on the wrong docs. **Seller:** you sell expert + kit as one priced engagement, leave transferable `kit/`, and exit on foundation + working-loop proof — not a productivity %. Detail lives in the owners below — this page is a **cache**.
+
+## Pitch pointers (owners decide)
+
+| Need | Open |
+|------|------|
+| Value / purpose (buyer and seller) | [marketing/positioning.md](marketing/positioning.md#value-and-purpose) |
+| Business owner / instead of seats or staff-aug | [marketing/positioning.md](marketing/positioning.md#for-the-business-owner) · [competition/landscape.md](competition/landscape.md) |
+| Who buys / 60s pitch / privacy one-liner | [marketing/positioning.md](marketing/positioning.md) |
+| You / we / exit / phases | [marketing/offer-model.md](marketing/offer-model.md#you--we--exit) |
+| What customer must bring | [consulting/change-project-qualification.md](consulting/change-project-qualification.md#customer-brings) |
+| Proposal skeleton | [consulting/railkit-change-project-proposal.md](consulting/railkit-change-project-proposal.md) |
+| Why pay (commercial) | [marketing/why-railkit.md](marketing/why-railkit.md) |
 
 ## Parts
 
 | Part | Meaning |
 |------|---------|
 | Governing framework | `kit/` left in the repo |
-| Change project | Paid install + adopt + on-contact win |
+| Change project | **Priced** expert + kit: install + adopt + on-contact win |
 | Authority | Kit README intent table; CANONICAL task → one doc; code/tests win |
-| Adapters | Thin Cursor (or other) wrappers; policy in docs + agents/skills |
+| Adapters | Thin editor wrappers; policy in docs + agents/skills |
 | Checks | Documentation and architecture budgets; ceilings only tighten |
 | Agent loop | Auto must/should; stop allowlist in [AGENTS.md](../kit/AGENTS.md#agent-stop-allowlist) |
 | Code-first | [CODE-FIRST.md](../kit/docs/CODE-FIRST.md) |

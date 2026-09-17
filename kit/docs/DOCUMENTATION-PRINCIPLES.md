@@ -10,6 +10,7 @@
 ## Fast path (read first)
 
 - **One deciding owner** per definition or contract; indexes only point.
+- **Prefer owners over aggregates.** A human cache is a last resort when a named job cannot open one owner — not a second why (see [Layer honesty](#documentation-structure)).
 - **Why vs how:** procedures in scripts / CI / infra / skills; docs keep why.
 - **Plain language:** short direct sentences; everyday words; define kit terms once — see [Plain language](#plain-language).
 - **Fast path** on deciding homes (≤ ~25 non-empty lines under `## Fast path` or hub Read order).
@@ -35,6 +36,7 @@
 3. Domain specs / heuristics
 4. Story / AC ledgers (test IDs only)
 5. Indexes (MAP, this file) — navigation only
+6. Human aggregates / caches — reading only; if they disagree with 1–5, fix the cache
 
 ## Documentation structure
 
@@ -43,10 +45,14 @@
 | **1** | One deciding owner | Two files both decide the same contract |
 | **2** | Indexes point | Paraphrase or second copy of a deciding table |
 | **3** | One job per section | Removable section with no loss; second definition under a new heading |
-| **4** | Layer honesty | Decide ≠ index ≠ claim ≠ journey |
+| **4** | Layer honesty | Decide ≠ index ≠ claim ≠ journey ≠ **cache** |
 | **5** | Why vs how | Long how that duplicates a script |
 | **6** | Thin adapters | Second policy tree in an editor folder |
 | **7** | Single intent router | Parallel Start Here tables outside the active root README (host root after install; monorepo root vs `kit/README` / `project/README` is intentional) |
+
+**Cache (human aggregate):** last resort only — e.g. a shareable digest when the job is “one packet,” not “decide this contract.” It may paraphrase. It does not decide. Prefer fixing owners and the intent router so the cache is unnecessary. If a cache exists: list upstream owners; refresh it when they change.
+
+**Fail if:** a cache is treated as the deciding owner for a contract another file owns; growing a cache instead of naming the owner; an index is silently used as a cache (paraphrase without the cache mark).
 
 ## Plain language
 
@@ -90,10 +96,19 @@ Shared Prefer/Avoid for review skills (`doc-review`, `layering-review`, `stabili
 | One review skill per turn | Dump owner essays before a fail-if |
 | Same-turn must/should fixes when the skill is the task | "Shall I fix?" when already running the review |
 | Numbered decision forks when two or more valid paths | Soft "options exist" without forks |
+| Numbered **pushback** fork when Prefer/Avoid is wrong for the job (confirm before editing the owner) | Silently ignore Prefer/Avoid, or invent a second rulebook in chat |
 
 ### Self-improving loop
 
-Fix toward the yardstick in the same turn. Same structural fail twice → propose a narrow mechanical gate or one owner lock (confirm before editing the yardstick).
+Fix toward the yardstick in the same turn when the Prefer/Avoid still fits the job.
+
+**Pushback (change the yardstick, not only the doc):** when a competent editor has a coherent reason that Prefer/Avoid or a rank fail-if is wrong for a real job — not “inconvenient this once” — stop and use a numbered fork:
+
+1. Keep the yardstick; fix the doc / plan toward it.
+2. Edit the **owner** Prefer/Avoid or fail-if (confirm before writing); then fix the doc to the new bar.
+3. Same structural fail twice with the yardstick still believed → propose a narrow mechanical gate (confirm before adding the check).
+
+Do not silently ignore Prefer/Avoid. Do not grow a second policy tree in the skill or chat. Heuristic forks that need a human pick still stop per [AGENTS.md](../AGENTS.md#agent-stop-allowlist).
 
 ## Mechanical gates
 

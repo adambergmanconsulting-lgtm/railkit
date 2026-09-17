@@ -5,27 +5,34 @@
 
 **Problem:** AI coding tools without shared rules of work waste time. People open the wrong docs, copy policy into editor-only dumps, and loosen quality bars under deadline pressure. Wiki playbooks and one-off cleanups do not stick.
 
-**Why:** Railkit is a governing framework plus a change project **applied to** a product host — so editors stay productive inside a practical tool-cost budget, without burning sessions on the wrong docs. Full chain: [project/marketing/why-railkit.md](project/marketing/why-railkit.md). Hosts after install: [kit/docs/WHY.md](kit/docs/WHY.md).
+**What we sell:** a **priced change project** — human expert with broad domain expertise, paired with the installable kit left in the host. **Not** Cursor, Copilot, or model seats.
+
+## Pitch questions → open
+
+Index only. Business surface detail: [project/README.md](project/README.md).
+
+| Question | Open |
+|----------|------|
+| What are we selling / not selling? | [project/marketing/positioning.md](project/marketing/positioning.md) (then [offer-model](project/marketing/offer-model.md) · [usp-moat](project/marketing/usp-moat.md#category)) |
+| What value / purpose (buyer and seller)? | [project/marketing/positioning.md](project/marketing/positioning.md#value-and-purpose) |
+| Why should a business owner fund this? | [project/marketing/positioning.md](project/marketing/positioning.md#for-the-business-owner) |
+| Why not more seats / rules dump / staff-aug? | [project/marketing/positioning.md](project/marketing/positioning.md#for-the-business-owner) · [project/competition/landscape.md](project/competition/landscape.md) |
+| Who is the customer (primary buyer)? | [project/marketing/positioning.md](project/marketing/positioning.md#who--job) |
+| 60-second pitch | [project/marketing/positioning.md](project/marketing/positioning.md#60-second-pitch) |
+| Why pay (not more tooling)? | [project/marketing/why-railkit.md](project/marketing/why-railkit.md) → mechanism [kit/docs/WHY.md](kit/docs/WHY.md) |
+| What must the customer bring / deliver? | [project/consulting/change-project-qualification.md](project/consulting/change-project-qualification.md#customer-brings) |
+| You / we / exit / success / phases | [project/marketing/offer-model.md](project/marketing/offer-model.md#you--we--exit) |
+| Privacy (kit in git vs agent egress) | [project/marketing/positioning.md](project/marketing/positioning.md#privacy-one-line-then-stop) · [project/consulting/privacy-and-legality.md](project/consulting/privacy-and-legality.md) |
+| Proposal / SOW skeleton | [project/consulting/railkit-change-project-proposal.md](project/consulting/railkit-change-project-proposal.md) |
+| Shareable overview (cache) | [project/digest.md](project/digest.md) |
+| Go / no-go this host? | [project/consulting/change-project-qualification.md](project/consulting/change-project-qualification.md) |
+| Claims we must not make | [project/marketing/usp-moat.md](project/marketing/usp-moat.md#do-not-claim) |
 
 **Stack:** No hard language lock-in ([qualification](project/consulting/change-project-qualification.md)). Shipped kit scripts and dogfood default to **JS/TS (npm)**; ideal unused-export depth uses Knip or a language equivalent.
 
-**Railkit has two parts:**
+**Two parts (pointers only):** priced change project + governing framework left in the host — [offer-model You / we / exit](project/marketing/offer-model.md#you--we--exit) · what hosts keep after install: [kit/README.md](kit/README.md).
 
-1. **Change project** — bring a codebase up to speed in a fixed order: named document owners and file-size budgets first, then a working loop, then ideal automated checks (including unused exports). Everything ships or sits on a dated queue with an owner and due date.
-2. **Governing framework** — what stays in the customer repo: one start-here table, one deciding doc per task, skills, thin editor adapters, and mechanical checks. Every editor (person or agent) keeps pushing coherence, efficiency, clarity, and quality. Agents do must/should work without “shall I?”; humans decide Prefer/Avoid forks.
-
-Same rules for humans and agents. The customer keeps the framework after the engagement.
-
-| You get | You do not get |
-|---------|----------------|
-| A change project with a correct sequence and a clear end state | Every check green on day one, or skipping foundation |
-| Document owners + file-size budgets early (so people find the right doc) | Tool dumps with no deciding owner |
-| Ideal CI that runs the same doc + size + unused-export checks locally | Raising budgets to unblock; lint-only as the whole bar; deferrals with no owner or date |
-| The same path for every editor | Separate “for humans” vs “for agents” rulebooks |
-
-**Who it is for:** eng leaders and platform owners, founder-led product teams, and consultancies that want client repos to keep the framework. Detail: [project/marketing/positioning.md](project/marketing/positioning.md).
-
-**Offer / USP / proposal:** [project/README.md](project/README.md) · [digest](project/digest.md) · [qualify host](project/consulting/change-project-qualification.md) · [proposal](project/consulting/railkit-change-project-proposal.md)
+**Full business hub:** [project/README.md](project/README.md).
 
 ## This repository
 
@@ -39,7 +46,8 @@ Same rules for humans and agents. The customer keeps the framework after the eng
 
 | Intent | Open |
 |--------|------|
-| Why / causal chain (commercial) | [project/marketing/why-railkit.md](project/marketing/why-railkit.md) |
+| Pitch questions (table above) | This page · [project/README.md](project/README.md) |
+| Why pay / break-even numbers | [project/marketing/why-railkit.md](project/marketing/why-railkit.md) |
 | Customer-facing kit hub (what hosts keep) | [kit/README.md](kit/README.md) |
 | Edit governing framework (docs, skills, scripts) | [kit/README.md](kit/README.md) → one intent row |
 | Offer / USP / marketing / competition / consulting | [project/README.md](project/README.md) |
