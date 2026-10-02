@@ -12,7 +12,7 @@ Session: pick one intent. Name the task in one sentence. Open only that owner Fa
 - layering / placement -> docs/engineering/architecture/application-layering.md + docs/ops/code-quality-and-refactor.md ; skill layering-review
 - priorities / checks vs ranks -> docs/ops/governing-priorities.md ; skill priorities-review
 - stability / side writes / leftover forks -> docs/ops/ongoing-engineering-bar.md ; skill stability-review
-- tests when behavior moves -> docs/ops/testing-bar.md
+- tests when behavior moves -> docs/ops/testing-bar.md then Preferred harness owner (Host fill-in)
 - UI / design pass -> docs/product/heuristics/ui-principles.md ; skill ui-review
 - fit / who we serve -> docs/product/heuristics/customer-targets.md then customer-fit.md ; skill fit-review
 - doc structure / plain language -> docs/DOCUMENTATION-PRINCIPLES.md ; skill doc-review

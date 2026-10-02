@@ -17,7 +17,7 @@ Before first edit: name the task in one sentence; open only that row's owner Fas
 - layering -> docs/engineering/architecture/application-layering.md + docs/ops/code-quality-and-refactor.md ; skill layering-review
 - priorities -> docs/ops/governing-priorities.md ; skill priorities-review
 - stability -> docs/ops/ongoing-engineering-bar.md ; skill stability-review
-- tests -> docs/ops/testing-bar.md
+- tests -> docs/ops/testing-bar.md then Preferred harness owner (Host fill-in)
 - UI review -> docs/product/heuristics/ui-principles.md ; skill ui-review
 - fit -> docs/product/heuristics/customer-targets.md then customer-fit.md ; skill fit-review
 - doc review -> docs/DOCUMENTATION-PRINCIPLES.md ; skill doc-review

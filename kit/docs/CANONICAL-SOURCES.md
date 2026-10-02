@@ -25,7 +25,8 @@
 | Dedupe / hotspots / where things live / size and unused-export checks | [code-quality-and-refactor.md](ops/code-quality-and-refactor.md) |
 | Governing priority ranks (higher wins) | [governing-priorities.md](ops/governing-priorities.md) |
 | Enduring eng touch rules | [ongoing-engineering-bar.md](ops/ongoing-engineering-bar.md) |
-| Tests when behavior moves (Rank 2) | [testing-bar.md](ops/testing-bar.md) |
+| Tests when behavior moves (Rank 2 — *when*) | [testing-bar.md](ops/testing-bar.md) |
+| TODO: Preferred harness how (*how* to write suite tests) | _(promote host doc named in testing-bar Host fill-in)_ |
 | CI / merge commands | [ci-flow.md](ops/ci-flow.md) |
 | Code-first / tribal → code | [CODE-FIRST.md](CODE-FIRST.md) |
 | Doc structure and plain language | [DOCUMENTATION-PRINCIPLES.md](DOCUMENTATION-PRINCIPLES.md) |
@@ -42,6 +43,7 @@
 | Priority conflict (which owner vs which check vs depth) | [governing-priorities.md](ops/governing-priorities.md) |
 | Side effects / leftover forks / clocks | [ongoing-engineering-bar.md](ops/ongoing-engineering-bar.md) |
 | Unit / seam / e2e when behavior moves | [testing-bar.md](ops/testing-bar.md) |
+| Author / extend preferred suite / harness tests | _(host how-doc from testing-bar Preferred harness owner)_ |
 | What CI to run / merge bar | [ci-flow.md](ops/ci-flow.md) |
 | Doc ownership / dual homes | [DOCUMENTATION-PRINCIPLES.md](DOCUMENTATION-PRINCIPLES.md) |
 | UI chrome conflict | [ui-principles.md](product/heuristics/ui-principles.md) |

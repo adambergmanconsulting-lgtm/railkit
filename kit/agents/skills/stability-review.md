@@ -17,4 +17,4 @@ Subject sentence (`stability:` / `contract:`). One skill per turn. Same-turn mus
 
 ## Severity
 
-**must** = parallel write path; leftover fork that disagrees with SSOT. **should** = missing invalidation; efficiency fork that reimplements priority.
+**must** = parallel write path; leftover fork that disagrees with SSOT; parallel instrument for the same job with no dated strangler ([CODE-FIRST.md](../../docs/CODE-FIRST.md)). **should** = missing invalidation; efficiency fork that reimplements priority.

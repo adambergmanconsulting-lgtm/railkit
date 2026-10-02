@@ -64,6 +64,8 @@ Copy hubs, `agents/`, chosen adapter, scripts, example contract, workflow. Keep 
 
 For each Core owner row: promote the best existing host doc, or keep the Railkit template and specialize. At most one `.md` path per Open cell. Add `## Fast path` to deciding homes. Wire documentation checks into the host umbrella.
 
+Specialize [testing-bar.md](ops/testing-bar.md) **Host fill-in**: name **Preferred harness owner (how)** and **Preferred harness (one line)** when the host already has a suite grammar; leave blank only until known (then fill before the first behavior-changing on-contact win).
+
 ### 4. File-size ratchets (foundation)
 
 Run architecture check against host code roots (`src/**`, or `apps`/`packages` — see [code-quality-and-refactor.md](ops/code-quality-and-refactor.md#architecture-roots-examples)). Set `architecture-ratchet.json` from **current** counts (baseline). Wire into local + CI beside doc checks.
@@ -76,7 +78,7 @@ For each inventoried process: create script, contract, workflow, or skill, **or*
 
 ### 6. On-contact win
 
-Pick the active delivery seam. Apply layering or hotspot extraction. **If behavior moves, add or update tests in the same change** ([testing-bar.md](ops/testing-bar.md)): unit/seam for logic; e2e when a user-visible path changes and a harness exists (else manual proof + queue harness). Show the loop works on real work. Keep the adapter thin.
+Pick the active delivery seam. Apply layering or hotspot extraction. **If behavior moves, add or update tests in the same change** ([testing-bar.md](ops/testing-bar.md)): open Preferred harness owner from Host fill-in when filled and **extend that harness**; unit/seam for logic; e2e when a user-visible path changes and a harness exists. If fill-in is empty, characterize once **and** queue harness extension (owner + date). Never invent a parallel suite that re-asserts a shape the preferred harness already covers. Show the loop works on real work. Keep the adapter thin.
 
 ### 7+. Ideal clock
 
@@ -92,7 +94,7 @@ Unused-export / Knip-or-equivalent (`check:unused-export` JSON clock), UI rails,
 - [ ] Tribal inventory exists; at least one process moved to code or queued
 - [ ] Adapter points at `agents/skills/` without a second policy tree
 - [ ] One on-contact win recorded on the active seam
-- [ ] Behavior-changing win includes tests per [testing-bar.md](ops/testing-bar.md) (or dated harness queue + explicit manual proof)
+- [ ] Behavior-changing win includes tests per [testing-bar.md](ops/testing-bar.md) following Host fill-in harness when filled (else dated harness queue + explicit manual/characterization proof)
 
 **Ideal (ship or dated queue with owner + date):**
 
@@ -117,7 +119,7 @@ Do not report “done” from chat notes alone. Prefer an adopt receipt (example
 
 ## Finding shape
 
-**must** — invert ranks ([governing-priorities.md](ops/governing-priorities.md)); dual deciding owners; Rank **2** behavior change with no proof; raising ratchet ceilings; CI diverges from local; **undated / ownerless / eternal soft skip** of a named ideal instrument; agent soft-opts out of must/should (“shall I?”, skip nudges).  
+**must** — invert ranks ([governing-priorities.md](ops/governing-priorities.md)); dual deciding owners; Rank **2** behavior change with no proof; Rank **2** proof via a new parallel suite when Preferred harness owner already covers that shape; parallel instrument for the same job with no dated strangler ([CODE-FIRST.md](CODE-FIRST.md)); raising ratchet ceilings; CI diverges from local; **undated / ownerless / eternal soft skip** of a named ideal instrument; agent soft-opts out of must/should (“shall I?”, skip nudges).  
 **should** — missing Fast path; Rank **7** queue missing owner or date; UI heuristics skipped on a UI host without a dated TODO; CI not wired to local checks.  
 **defer** — every Rank **7** instrument green day one; full vendor apply; living design page; perfect doc trim (still clock if named as ideal for this host).
 
