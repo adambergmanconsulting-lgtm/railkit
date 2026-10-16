@@ -6,29 +6,35 @@
 
 ## Fast path (read first)
 
-1. Run `node kit/scripts/install/copy-kit-to-host.js --target <hostDir>` (or copy per [What to copy](#what-to-copy)).
+1. Run `node kit/scripts/install/copy-kit-to-host.js --target <hostDir>` (or copy per [What to copy](#what-to-copy)). Default packs are `core,ui,fit`.
 2. Point the host intent router at Railkit rows — use [templates/host-readme-stub.md](../templates/host-readme-stub.md); **do not** keep kit `README.md` (it links monorepo `project/`).
-3. Set `architecture-budgets.json` `roots` to host code — examples: `["src"]`, or `["apps","packages"]` for monorepos (kit defaults scan kit tree only). See [code-quality-and-refactor.md](ops/code-quality-and-refactor.md#architecture-roots-examples).
+3. Confirm `architecture-budgets.json` `roots`. The script sets `["src"]` when `src/` exists, or `["apps","packages"]` when both exist. Otherwise set roots by hand ([code-quality-and-refactor.md](ops/code-quality-and-refactor.md#architecture-roots-examples)).
 4. Wire `package.json` check scripts to the installed script paths; run [ADOPTION.md](ADOPTION.md).
 5. Rank **7:** wire `check:unused-export` (`queued` with owner+due, or `knip`) — not part of foundation `check:railkit` until you choose.
+6. After adopt, re-run with `--trim-adopt` so the install manual leaves the host deciding homes. Keep [templates/adopt-receipt.md](../templates/adopt-receipt.md).
 
 ## What to copy
 
-| From `kit/` | Into host |
-|-------------|-----------|
-| `docs/` (hubs, ops, engineering, product/heuristics) | `docs/` (merge; keep host product specs) |
-| `agents/` | `agents/` (canonical skills) |
-| `adapters/cursor/` | `.cursor/` after reading [adapters/cursor/README.md](../adapters/cursor/README.md) |
-| `adapters/README.md` | `adapters/README.md` (adapter contract index) |
-| `templates/agent-session-rules.md` | Host `.cursorrules` / agent rules (adapt names) |
-| `templates/host-readme-stub.md` | Host `README.md` if missing (specialize) |
-| `templates/rank7-dated-queue.md` | Host `docs/ops/rank7-dated-queue.md` (install script copies) |
-| `scripts/` | `scripts/railkit/` (default) or merge with `--scripts-merge` |
-| `infra/contracts/example-hosting-contract.json` | Start host `infra/contracts/` |
-| `llm.txt`, `AGENTS.md` | Root |
-| Monorepo `.github/workflows/railkit-checks.yml` | Host workflows (rename; `working-directory` = host root) |
+| Pack | From `kit/` | Into host |
+|------|-------------|-----------|
+| core | `docs/` except `MAP.md` and `ops/rank-chain-example.md` | `docs/` (merge; keep host product specs) |
+| core | `agents/` except `skills/engagement-review.md` | `agents/` |
+| core | `adapters/cursor/` except engagement-review | `.cursor/` after [adapters/cursor/README.md](../adapters/cursor/README.md) |
+| core | `adapters/README.md`, `llm.txt`, `AGENTS.md` | same paths |
+| core | `templates/agent-session-rules.md` | Host `.cursorrules` |
+| core | `templates/host-readme-stub.md` | Host `README.md` if missing |
+| core | `templates/rank7-dated-queue.md` | `docs/ops/rank7-dated-queue.md` |
+| core | `scripts/` except `install/` | `scripts/railkit/` or `--scripts-merge` |
+| ui (default) | `docs/product/heuristics/ui-*.md`, layout, living-design | same paths |
+| fit (default) | `customer-targets.md`, `customer-fit.md` | same paths |
+| hosting (opt-in) | `infra/` including the example contract | `infra/` |
+| seller (opt-in) | `engagement-review` skill and Cursor adapter | same paths |
 
-Do not copy monorepo `project/` or kit `README.md` as the host product hub.
+Monorepo links (`project/`, `examples/first-host/`) are rewritten to GitHub on copy. Do not copy monorepo `project/` or kit `README.md` as the host product hub. Copy `.github/workflows/railkit-checks.yml` by hand (`working-directory` = host root).
+
+```bash
+node kit/scripts/install/copy-kit-to-host.js --target <hostDir> --packs core,ui,fit,hosting
+```
 
 ## Scripts layout
 

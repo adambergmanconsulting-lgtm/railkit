@@ -4,17 +4,17 @@
 
 ## Fast path (read first)
 
-- Name buyers and not-buyers.
-- One Primary job per segment.
-- Defer larger bands until locked.
+- Name who uses this product and the one job they hire it for.
+- Add another row only when a second job is real.
+- Leave a cell empty until you know it.
 
 ## Who / job (fill-in)
 
-| Segment | Primary job | Not these buyers |
-|---------|-------------|------------------|
-| TODO Free / entry | _(host)_ | _(host)_ |
-| TODO Paid individual | _(host)_ | _(host)_ |
-| TODO Team / org | _(host)_ | _(host)_ |
+One row is required before fit-review. Do not invent Free / Paid / Team segments to fill the table.
+
+| Who uses this | Primary job | Not this |
+|---------------|-------------|----------|
+| _(name the person)_ | _(one job)_ | _(who this product is not for)_ |
 
 ## App core (index)
 

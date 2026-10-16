@@ -75,7 +75,7 @@ In `architecture-budgets.json` (next to the architecture check scripts):
 | Persistence / SQL / ORM | Domain store / repository modules |
 | Shared API error shaping | One helper module |
 | Feature constants / copy | One owner module each |
-| TODO | _(add host rows during adopt)_ |
+| _(host row)_ | _(delete rows for layers this host does not have)_ |
 
 ## Size ratchets, breakpoints, and cost
 
