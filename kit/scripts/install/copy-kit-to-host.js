@@ -106,7 +106,7 @@ function githubUrl(repoRel) {
   return `${GITHUB}/${isFile ? 'blob' : 'tree'}/main/${clean}`;
 }
 
-function rewriteLinks(text, kitRel, skippedKitRels) {
+function rewriteLinks(text, kitRel, skippedKitRels, scriptsLayout) {
   return text.replace(/\]\(([^)\s]+)\)/g, (full, href) => {
     if (/^(https?:|mailto:|#)/.test(href)) return full;
     const hashAt = href.indexOf('#');
@@ -116,6 +116,16 @@ function rewriteLinks(text, kitRel, skippedKitRels) {
     const resolved = path.posix.normalize(
       path.posix.join(path.posix.dirname(kitRel), pathPart)
     );
+    if (
+      scriptsLayout === 'railkit' &&
+      resolved.startsWith('kit/scripts/') &&
+      !kitRel.startsWith('kit/scripts/')
+    ) {
+      const hostSource = kitRel.slice('kit/'.length);
+      const target = `scripts/railkit/${resolved.slice('kit/scripts/'.length)}`;
+      const rel = path.posix.relative(path.posix.dirname(hostSource), target);
+      return `](${rel}${hash})`;
+    }
     const outsideKit = !resolved.startsWith('kit/');
     if (outsideKit || skippedKitRels.has(resolved)) {
       return `](${githubUrl(resolved)}${hash})`;
@@ -198,7 +208,7 @@ function rewriteTree(host, scriptsLayout, skippedKitRels) {
     const kitRel = hostRelToKitRel(hostRel, scriptsLayout);
     if (!kitRel) continue;
     const text = fs.readFileSync(abs, 'utf8');
-    const next = rewriteLinks(text, kitRel, skippedKitRels);
+    const next = rewriteLinks(text, kitRel, skippedKitRels, scriptsLayout);
     let patched = next;
     if (hostRel.split(path.sep).join('/') === 'llm.txt') {
       patched = patched.replace(/^- browse docs -> docs\/MAP\.md\r?\n/m, '');
@@ -236,6 +246,41 @@ function patchOwnership(host, scriptsDest) {
     fs.existsSync(path.join(host, home))
   );
   fs.writeFileSync(rel, `${JSON.stringify(cfg, null, 2)}\n`);
+}
+
+function patchDocumentationBudgets(host, scriptsDest) {
+  const budgetsPath = path.join(scriptsDest, 'documentation', 'documentation-budgets.json');
+  if (!fs.existsSync(budgetsPath)) return;
+  const budgets = JSON.parse(fs.readFileSync(budgetsPath, 'utf8'));
+  for (const area of Object.values(budgets.areas || {})) {
+    area.globs = (area.globs || []).filter((glob) => {
+      if (glob.includes('*')) return true;
+      return fs.existsSync(path.join(host, glob));
+    });
+  }
+  fs.writeFileSync(budgetsPath, `${JSON.stringify(budgets, null, 2)}\n`);
+}
+
+function patchScriptsReadme(scriptsDest) {
+  const readme = path.join(scriptsDest, 'README.md');
+  if (!fs.existsSync(readme)) return;
+  let text = fs.readFileSync(readme, 'utf8').replace(
+    /CI: \[`\.github\/workflows\/railkit-checks\.yml`\]\([^)]+\)\. Dogfood host CI: \[`first-host-checks\.yml`\]\([^)]+\)\. Dated queue template: \[templates\/rank7-dated-queue\.md\]\([^)]+\)\./,
+    'CI runs `npm run check:railkit` from the host workflow. Pull requests use `templates/pr-checks.yml` in the kit. Dated queue: `docs/ops/rank7-dated-queue.md`.'
+  );
+  if (path.basename(scriptsDest) === 'railkit') {
+    text = text.replace(/\]\(\.\.\/docs\//g, '](../../docs/');
+  }
+  fs.writeFileSync(readme, text);
+}
+
+function copyPrChecks(host) {
+  const destDir = path.join(host, '.github', 'workflows');
+  if (fs.existsSync(destDir) && fs.readdirSync(destDir).length > 0) return;
+  copyFile(
+    path.join(kitRoot, 'templates', 'pr-checks.yml'),
+    path.join(destDir, 'pr-checks.yml')
+  );
 }
 
 function trimAdopt(host, scriptsDest) {
@@ -303,9 +348,12 @@ When the host has src/ (or apps/ and packages/), architecture roots leave the ki
 
   const skipped = prunePacks(host, args.packs);
   rewriteTree(host, args.scriptsLayout, skipped);
+  patchScriptsReadme(scriptsDest);
+  copyPrChecks(host);
   const roots = patchArchitectureRoots(host, scriptsDest);
   patchOwnership(host, scriptsDest);
   if (args.trimAdopt) trimAdopt(host, scriptsDest);
+  patchDocumentationBudgets(host, scriptsDest);
 
   console.log(`copy-kit-to-host OK -> ${host}`);
   console.log(`packs: ${[...args.packs].join(', ')}`);

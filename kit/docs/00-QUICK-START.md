@@ -30,7 +30,9 @@
 | hosting (opt-in) | `infra/` including the example contract | `infra/` |
 | seller (opt-in) | `engagement-review` skill and Cursor adapter | same paths |
 
-Monorepo links (`project/`, `examples/first-host/`) are rewritten to GitHub on copy. Do not copy monorepo `project/` or kit `README.md` as the host product hub. Copy `.github/workflows/railkit-checks.yml` by hand (`working-directory` = host root).
+Monorepo links (`project/`, `examples/first-host/`) are rewritten to GitHub on copy. Nested script links point at `scripts/railkit/`. Do not copy monorepo `project/` or kit `README.md` as the host product hub.
+
+Pull requests: [templates/pr-checks.yml](../templates/pr-checks.yml) (the install script copies it when `.github/workflows/` is empty). It runs `npm test` and `npm run check:railkit` on `pull_request` only. If the default-branch deploy workflow already runs those commands, do not add a second push job. The kit repo's own `railkit-checks.yml` stays on push and pull request because that repo has no deploy workflow.
 
 ```bash
 node kit/scripts/install/copy-kit-to-host.js --target <hostDir> --packs core,ui,fit,hosting

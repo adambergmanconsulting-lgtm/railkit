@@ -29,6 +29,7 @@ Replace this section with branch names, resume flags, and E2E tiers. Keep the ru
 | Prefer | Avoid |
 |--------|--------|
 | One host umbrella that matches laptop commands | Divergent CI and laptop commands |
+| Pull-request workflow for that umbrella; a deploy workflow may run the same commands before publish | A second push workflow that repeats those commands |
 | Rank **1**–**2** held before chasing Rank **7** instruments | Skipping owners to wire Knip or showy e2e jobs first |
 | CI as how Rank **3**/**4** bind every editor | Treating CI jobs as goals above situating (opening the one right owner doc before edit) |
 | Unit + e2e as Rank **2** proof vehicles | Merging behavior changes with red or skipped tests |

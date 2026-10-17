@@ -72,6 +72,28 @@ test('default copy keeps governing docs and drops seller, map, rank-chain, and h
   );
   assert.match(integrations, /--packs hosting/);
   assert.doesNotMatch(integrations, /example-hosting-contract\.json/);
+
+  const ciFlow = fs.readFileSync(path.join(host, 'docs/ops/ci-flow.md'), 'utf8');
+  assert.match(ciFlow, /scripts\/railkit\/ci\/README\.md/);
+
+  const scriptsReadme = fs.readFileSync(path.join(host, 'scripts/railkit/README.md'), 'utf8');
+  assert.equal(scriptsReadme.includes('first-host-checks.yml'), false);
+
+  const docBudgets = JSON.parse(
+    fs.readFileSync(
+      path.join(host, 'scripts/railkit/documentation/documentation-budgets.json'),
+      'utf8'
+    )
+  );
+  const globs = Object.values(docBudgets.areas).flatMap((area) => area.globs);
+  assert.equal(globs.includes('docs/MAP.md'), false);
+
+  const prChecks = fs.readFileSync(
+    path.join(host, '.github/workflows/pr-checks.yml'),
+    'utf8'
+  );
+  assert.match(prChecks, /pull_request/);
+  assert.doesNotMatch(prChecks, /^  push:/m);
 });
 
 test('hosting pack copies the example contract', () => {
