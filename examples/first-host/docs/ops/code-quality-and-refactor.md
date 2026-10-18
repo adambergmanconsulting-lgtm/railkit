@@ -12,6 +12,7 @@
 - **First pass ≠ mass shrink:** foundation **baselines** the ratchet; shrink **on contact** (when you open a file for real work), not a day-one sweep.
 - **Trend gates:** instruments of those ranks; sequence and customer depth: [governing-priorities.md](governing-priorities.md), [ADOPTION.md](./governing-priorities.md).
 - **Layering:** [application-layering.md](../engineering/architecture/application-layering.md).
+- **Leftover paths:** [Leftover paths](#leftover-paths). The edit that moves a path deletes the old file.
 
 ## Prefer / Avoid
 
@@ -118,6 +119,10 @@ Configured in [`architecture-budgets.json`](../../scripts/architecture/architect
 | Raising ceilings to unblock | Permanent tax increase; violates Rank **4** |
 
 **Order of leverage:** fix situating first, then baseline size, then shrink on contact. Size alone does not fix wrong-owner sessions.
+
+## Leftover paths
+
+In the edit that moves or replaces a path, delete the old file. Do not leave an empty folder. Do not leave a doc whose deciding owner now lives elsewhere ([DOCUMENTATION-PRINCIPLES.md](../DOCUMENTATION-PRINCIPLES.md) pruning). Unused exports stay on the unused-export check.
 
 ## Large files (touch rule)
 

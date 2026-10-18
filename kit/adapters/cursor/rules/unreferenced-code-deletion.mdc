@@ -11,5 +11,6 @@ alwaysApply: false
 
 - New helpers stay unexported unless a second file imports them in the same change.
 - When deleting importers, drop export or delete the symbol in the same edit.
+- A moved or replaced path deletes the old file in that edit. No empty folder, and no doc whose owner moved (code-quality Leftover paths).
 - No silence-only test imports to hide unused exports.
 - Exceptions: file-based routing, dynamic import, string-keyed registries (narrow ignore + comment).
