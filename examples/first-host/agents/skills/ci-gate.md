@@ -7,7 +7,7 @@ Pick what to run when CI failed, before merge, or before push. Do not invent rem
 ## Loop
 
 1. Name the failure or the question ("safe to merge?").
-2. Prefer `npm run check:railkit` (or host umbrella) first.
+2. Prefer the host umbrella first (JS pack: `check-umbrella.js`). Resume with `CHECK_FROM=<step>` when an earlier step already passed.
 3. If the host has resume flags / peel manifests (ways to skip already-green prefixes), use them; document in ci-flow.
 4. Heavy suites only when paths or the failure warrant them.
 

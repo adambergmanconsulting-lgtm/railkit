@@ -20,6 +20,10 @@
 | **Shared contracts** | Access decisions, identity keys, cross-surface resolution |
 | **Infra adapters** | Cloud SDKs, email, payments (behind narrow ports) |
 
+## Delete if absent
+
+Remove a boundary row when this host has no such layer. A static site deletes the HTTP API handler and infra adapters. Delete the admin-versus-end-user Prefer row when there is one surface. Host fill-in lists only folders that exist.
+
 ## Prefer / Avoid
 
 | Prefer | Avoid |
@@ -32,4 +36,8 @@
 
 ## Host fill-in
 
-Document the host's concrete folders (e.g. `app/api` → `server/*-store`, or `cmd/api` → `internal/…`) in this table during adopt. If admin and end-user shells diverge, name both as minor domains — not competing owners for one rule.
+| Host layer | Folder |
+|------------|--------|
+| _(name)_ | _(path)_ |
+
+Name both shells when admin and end-user diverge. They are minor domains, not two owners for one rule.

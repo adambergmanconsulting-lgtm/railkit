@@ -13,7 +13,7 @@
     "check:architecture": "npm --prefix kit run check:architecture",
     "check:architecture:ratchet": "npm --prefix kit run check:architecture:ratchet",
     "check:unused-export": "npm --prefix kit run check:unused-export",
-    "check:first-host": "npm --prefix examples/first-host run check:railkit && npm --prefix examples/first-host run test:catalog",
+    "check:first-host": "npm --prefix examples/first-host run check:quality && npm --prefix examples/first-host run test:catalog",
     "install:host": "npm --prefix kit run install:host"
   }
 }

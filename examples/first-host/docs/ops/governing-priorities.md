@@ -1,8 +1,8 @@
 # Governing priorities
 
-**Purpose:** Ranked yardstick for the Railkit governing framework and change projects. Higher rank wins when checks or tools conflict.  
-**Owns:** priority ranks, how customer needs adjust depth, and which practices are **consequences** (not peer goals).  
-**Does not own:** how to run a specific gate ([testing-bar.md](testing-bar.md), [code-quality-and-refactor.md](code-quality-and-refactor.md), [ci-flow.md](ci-flow.md)), adopt step list ([ADOPTION.md](../ADOPTION.md)), doc-structure ranks ([DOCUMENTATION-PRINCIPLES.md](../DOCUMENTATION-PRINCIPLES.md)), agent stop allowlist detail ([AGENTS.md](../../AGENTS.md#agent-stop-allowlist)).
+**Purpose:** Ranked yardstick for this repo. Higher rank wins when checks or tools conflict.  
+**Owns:** priority ranks, how a host adjusts depth, and which practices are **consequences** (not peer goals).  
+**Does not own:** how to run a specific gate ([testing-bar.md](testing-bar.md), [code-quality-and-refactor.md](code-quality-and-refactor.md), [ci-flow.md](ci-flow.md)), the engagement adopt sequence ([ADOPTION.md](./governing-priorities.md), removed at exit), doc-structure ranks ([DOCUMENTATION-PRINCIPLES.md](../DOCUMENTATION-PRINCIPLES.md)), agent stop allowlist detail ([AGENTS.md](../../AGENTS.md#agent-stop-allowlist)).
 
 ## Fast path (read first)
 
@@ -10,12 +10,11 @@
 - Tests, CI, Knip, and size ratchets (budgets that only get stricter) are **instruments** — checks or tools that serve these ranks — see [Consequences](#consequences-not-peer-goals).
 - Rank **7** = **clocked** depth-fit (deferred with owner + due date), not soft forever-skip.
 - Agents auto-run must/should; stop only per [AGENTS.md stop allowlist](../../AGENTS.md#agent-stop-allowlist).
-- Adopt order implements this yardstick: [ADOPTION.md](../ADOPTION.md#correct-sequence).
-- Worked seven-link example: [rank-chain-example.md](rank-chain-example.md).
+- During an engagement, the adopt sequence implements this yardstick ([ADOPTION.md](./governing-priorities.md)). After exit, this rank table is the owner.
 
 ## Why
 
-A pile of “must wire X” checklists drifts into cargo-cult gates. Soft optional nudges drift into skipped work. Railkit’s yardstick is ranks + fail-if, then procedures as consequences. Customers differ in harness maturity; they get **dated queues** (deferred with owner + due date), not silent skips of situating (opening the one right owner doc before edit) or unverified behavior change.
+A pile of “must wire X” checklists drifts into cargo-cult gates. Soft optional nudges drift into skipped work. The yardstick is ranks + fail-if, then procedures as consequences. Customers differ in harness maturity; they get **dated queues** (deferred with owner + due date), not silent skips of situating (opening the one right owner doc before edit) or unverified behavior change.
 
 ### Why this order (dependency chain)
 
@@ -29,9 +28,9 @@ Higher ranks are prerequisites, not peer preferences:
 6. **Net-simpler structure** — Size/dead-code pressure only helps after owners and proof exist; otherwise you rearrange noise. Prefer: ratchet + extract. Avoid: skill/docs without a ceiling, or ceilings without code-first how for the recurring cleanup. **Foundation baselines** size; **on contact** (when you open a file for real work) shrinks hotspots — not a day-one mass shrink, and not “agents cannot edit large files” ([code-quality-and-refactor.md](code-quality-and-refactor.md#size-ratchets-breakpoints-and-cost)).
 7. **Fit depth** — Ideal instruments (Knip-class, full e2e on CI, vendor apply) are **named and clocked**, never faked green and never soft-skipped; Rank 7 never excuses skipping 1–2.
 
-**Adopt timing vs rank numbers:** Rank **2** binds on the **first behavior-changing touch** (working-loop on contact). An early file-size ratchet (Ranks **4/6**) is foundation *structure* support — it does **not** outrank Rank **2** proof when behavior moves. Sequence: [ADOPTION.md](../ADOPTION.md#correct-sequence).
+**Adopt timing vs rank numbers:** Rank **2** binds on the **first behavior-changing touch** (working-loop on contact). An early file-size ratchet (Ranks **4/6**) is foundation *structure* support — it does **not** outrank Rank **2** proof when behavior moves. Sequence: [ADOPTION.md](./governing-priorities.md).
 
-**Not the same yardstick:** doc-structure ranks ([DOCUMENTATION-PRINCIPLES.md](../DOCUMENTATION-PRINCIPLES.md)) and engagement ranks (`project/consulting/engagement-priorities.md`, not installed) are separate. This file owns **host governing** ranks only.
+**Not the same yardstick:** doc-structure ranks ([DOCUMENTATION-PRINCIPLES.md](../DOCUMENTATION-PRINCIPLES.md)) are separate. Seller engagement ranks are not part of this repo. This file owns **host governing** ranks only.
 
 ## Ranked priorities
 
@@ -62,7 +61,7 @@ Higher ranks are prerequisites, not peer preferences:
 
 **Clocked queue ≠ skip:** a Rank **7** queue without owner and date is a soft skip (fail Rank **7**). Slipped dates re-enter the working loop.
 
-**Where clocks live:** unused-export / Knip-class uses mechanical `unused-export.json` (`owner` + `due`) via `check:unused-export`. Other ideal instruments (UI rails, vendor apply, full e2e suite) use [rank7-dated-queue.md](../../templates/rank7-dated-queue.md) (or the host ops copy) until a dedicated check exists.
+**Where clocks live:** unused-export uses mechanical `unused-export.json` (`owner` + `due`) via `check:unused-export`. Other ideal checks (UI rails, vendor apply, full e2e suite) use [deferred-checks.md](deferred-checks.md) until a dedicated check exists.
 
 ## Customer adjustment
 
@@ -81,10 +80,8 @@ When two instruments conflict, name the deciding **rank** (same habit as UI prin
 
 ## Related
 
-- Adopt sequence: [ADOPTION.md](../ADOPTION.md)
 - Agent stop allowlist: [AGENTS.md](../../AGENTS.md#agent-stop-allowlist)
 - Skill: [priorities-review.md](../../agents/skills/priorities-review.md)
-- Chain example: [rank-chain-example.md](rank-chain-example.md)
 - Testing instrument: [testing-bar.md](testing-bar.md)
 - Structure / trend instruments: [code-quality-and-refactor.md](code-quality-and-refactor.md)
 - Doc-structure ranks (separate yardstick): [DOCUMENTATION-PRINCIPLES.md](../DOCUMENTATION-PRINCIPLES.md)

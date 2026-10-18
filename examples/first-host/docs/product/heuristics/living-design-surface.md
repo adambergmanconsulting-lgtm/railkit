@@ -1,6 +1,6 @@
 # Living design surface
 
-**Purpose:** Pattern note for an optional host yardstick page (tokens, components, motion). Reference shape: an internal `/admin/design`-style route. Railkit does not ship the page.
+**Purpose:** Pattern note for an optional host yardstick page (tokens, components, motion). Reference shape: an internal design route. This framework does not ship the page.
 
 ## Fast path (read first)
 

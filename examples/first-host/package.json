@@ -1,18 +1,19 @@
 {
-  "name": "railkit-first-host",
+  "name": "demo-catalog",
   "version": "0.1.0",
   "private": true,
-  "description": "Railkit dogfood host: Demo Catalog after adopt",
+  "description": "Demo Catalog dogfood host after the working agreements were cut over",
   "engines": {
     "node": ">=20"
   },
   "scripts": {
-    "check:documentation": "node scripts/railkit/documentation/check-documentation.js",
-    "check:documentation:ownership": "node scripts/railkit/documentation/check-documentation-ownership.js",
-    "check:architecture": "node scripts/railkit/architecture/check-architecture.js",
-    "check:architecture:ratchet": "node scripts/railkit/architecture/check-architecture-ratchet.js",
-    "check:unused-export": "node scripts/railkit/unused-export/check-unused-export.js",
-    "check:railkit": "npm run check:documentation && npm run check:documentation:ownership && npm run check:architecture && npm run check:architecture:ratchet",
+    "check:documentation": "node scripts/documentation/check-documentation.js",
+    "check:documentation:ownership": "node scripts/documentation/check-documentation-ownership.js",
+    "check:architecture": "node scripts/architecture/check-architecture.js",
+    "check:architecture:ratchet": "node scripts/architecture/check-architecture-ratchet.js",
+    "check:unused-export": "node scripts/unused-export/check-unused-export.js",
+    "check:editor-rules": "node scripts/editor/check-always-on-rules.js",
+    "check:quality": "node scripts/check-umbrella.js && npm run check:editor-rules",
     "test:catalog": "node scripts/test-catalog.js"
   }
 }

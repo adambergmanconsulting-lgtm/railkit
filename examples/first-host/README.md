@@ -1,12 +1,11 @@
 # Demo Catalog (first-host)
 
-Small JS catalog demo used as Railkit's first dogfood host. Not a product.
+Small JS catalog demo. Dogfood host after exit: the working agreements are this repo's own. Not a product.
 
 ## Start here by intent
 
 | Intent | Open |
 |--------|------|
-| Install / adopt | [docs/00-QUICK-START.md](docs/00-QUICK-START.md) ; [docs/ADOPTION.md](docs/ADOPTION.md) |
 | Implement / fix / refactor | [AGENTS.md](AGENTS.md) → [docs/CANONICAL-SOURCES.md](docs/CANONICAL-SOURCES.md) |
 | CI / merge | [docs/ops/ci-flow.md](docs/ops/ci-flow.md) |
 | Product overview | [docs/product/overview.md](docs/product/overview.md) |
@@ -20,5 +19,5 @@ Catalog list + metrics strip. Domain spine: [docs/product/overview.md](docs/prod
 ## Checks
 
 ```bash
-npm run check:railkit
+npm run check:quality
 ```

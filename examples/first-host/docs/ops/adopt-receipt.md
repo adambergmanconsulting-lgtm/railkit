@@ -2,7 +2,7 @@
 
 **Host:** `examples/first-host` (Demo Catalog)  
 **Date:** 2026-09-13  
-**Decider:** Railkit maintainer (dogfood)  
+**Decider:** maintainer (dogfood)  
 **Qualification:** Go — named decider, writable tree, active seam (`src/app.js` hotspot), accepts sequence. Learning host (greenfield + planted chaos), not a paid engagement.
 
 ## Sequence outcome
@@ -30,13 +30,13 @@
 
 **Ideal (dated queue):**
 
-- [ ] `check:unused-export` — queue owner maintainer — 2026-10-15 (`mode: queued` in `scripts/railkit/unused-export/unused-export.json`)
+- [ ] `check:unused-export` — queue owner maintainer — 2026-10-15 (`mode: queued` in `scripts/unused-export/unused-export.json`)
 - [ ] UI heuristics pass — UI host light; templates present — queue one `ui-review` — 2026-10-15
 - [ ] Vendor assert/apply for Vercel — with hosting contract — 2026-10-15
 
 ## Finding shape (fed back to kit)
 
-**must (fixed in kit):** check scripts broke under `scripts/railkit/` until `findRepoRoot` walk-up; copy installer missing; host must set architecture `roots` to `src`.
+**must (fixed in the framework):** check scripts broke under the nested scripts folder until `findRepoRoot` walk-up; copy installer missing; host must set architecture `roots` to `src`.
 
 **should:** kit README must not be the host README (monorepo `project/` links); document claim/status moments on ADOPTION exit.
 

@@ -15,4 +15,4 @@
 | 5 Tribal → code | _(moved or dated queue)_ |
 | 6 On-contact win | _(seam and Rank 2 proof if behavior moved)_ |
 
-Playbook for the next host: [ADOPTION.md](https://github.com/adambergmanconsulting-lgtm/railkit/blob/main/kit/docs/ADOPTION.md).
+This file is the host record of what was baselined. The install manual is removed at exit.

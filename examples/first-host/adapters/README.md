@@ -8,7 +8,7 @@ Policy and Prefer/Avoid live in `docs/` and `agents/skills/`. Adapters are thin 
 |--------|--------|
 | Short must-dos + links to owners | Second policy tree in the editor folder |
 | Skill frontmatter that points at `agents/skills/*.md` | Copying Prefer/Avoid tables into adapter bodies |
-| Few always-on rules | Fat always-on dumps of 400-line docs |
+| At most 3 always-on rules, 30 body lines (editor pack check) | Fat always-on dumps of 400-line docs |
 
 ## Included
 
@@ -22,4 +22,4 @@ Any agent that can load markdown:
 2. Load skill bodies from [agents/skills/](../agents/skills/) by name when the user invokes that intent.
 3. Do not fork policy into tool-specific prose.
 
-Examples: Claude Code custom commands, Copilot custom instructions, and similar can symlink or `@`-include `agents/skills/<name>.md`. Full ports are out of Railkit v1 scope.
+Examples: Claude Code custom commands, Copilot custom instructions, and similar can symlink or `@`-include `agents/skills/<name>.md`. A full port for every editor is not required.

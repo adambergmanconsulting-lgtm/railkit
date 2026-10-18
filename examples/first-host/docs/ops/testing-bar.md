@@ -15,7 +15,7 @@ Tests and CI test jobs are **instruments of Rank 2** (checks/tools that serve th
 - **Unit / seam** for domain and API logic; **e2e** when a user-visible path changes and a harness exists.
 - **Docs-only / pure rename:** proof not required.
 - Missing harness (Rank **7**): dated queue (owner + due) + characterization or manual proof for this PR — never zero proof on a behavior change.
-- CI: [ci-flow.md](ci-flow.md). Adopt: [ADOPTION.md](../ADOPTION.md#correct-sequence).
+- CI: [ci-flow.md](ci-flow.md). Adopt: [ADOPTION.md](./governing-priorities.md).
 
 ## Why (consequence)
 

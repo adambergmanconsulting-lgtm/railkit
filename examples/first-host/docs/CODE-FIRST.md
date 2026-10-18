@@ -11,7 +11,7 @@
 - **Extend first:** search Host fill-in / CANONICAL / existing suite, script, workflow, or rewriter before creating a peer instrument.
 - **Prose role:** why, contracts, Prefer/Avoid. Link to the path that runs.
 - **Judgment stays prose:** UI ranks, fit ranks, layering Prefer/Avoid are yardsticks, not JSON linters.
-- **Adopt:** inventory tribal steps; **dated-queue** (deferred with owner + due date) script/contract/skill moves. Do not fail adopt for unfinished history if the inventory exists ([ADOPTION.md](ADOPTION.md)).
+- **Adopt:** inventory tribal steps; **dated-queue** (deferred with owner + due date) script/contract/skill moves. Do not fail adopt for unfinished history if the inventory exists ([ADOPTION.md](./ops/governing-priorities.md)).
 
 ## Prefer / Avoid
 
@@ -36,7 +36,7 @@
 
 | Domain | Code-first shape |
 |--------|------------------|
-| Quality / entropy | Instruments (checks/tools that serve a rank) of [governing-priorities.md](ops/governing-priorities.md) Ranks **4**/**6**; order in [ADOPTION.md](ADOPTION.md#correct-sequence) |
+| Quality / entropy | Instruments (checks/tools that serve a rank) of [governing-priorities.md](ops/governing-priorities.md) Ranks **4**/**6**; order in [ADOPTION.md](./ops/governing-priorities.md) |
 | Tests | Instrument of Rank **2** — [testing-bar.md](ops/testing-bar.md) (*when*) then Preferred harness owner (*how*) |
 | CI | Same umbrella as local (Ranks **3**/**4**); Rank **7** depth **clocked** (owner + date) |
 | Integrations / hosting / DNS | [`infra/contracts/`](../infra/contracts/) + apply/assert scripts |

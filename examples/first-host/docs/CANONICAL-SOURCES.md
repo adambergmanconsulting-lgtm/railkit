@@ -10,7 +10,6 @@
 
 - **Pick one task row** below — at most one owner doc per task.
 - **Who wins when docs disagree:** [DOCUMENTATION-PRINCIPLES.md — Authority](DOCUMENTATION-PRINCIPLES.md#authority-when-docs-disagree).
-- **During adopt:** replace TODO Core owners with the host's real deciding docs ([ADOPTION.md](ADOPTION.md)).
 
 ## Core owners (fill during adopt)
 
@@ -49,4 +48,3 @@
 | UI chrome conflict | [ui-principles.md](product/heuristics/ui-principles.md) |
 | Should we build this (fit) | [customer-fit.md](product/heuristics/customer-fit.md) |
 | Portal / deploy / DNS only in wiki | [CODE-FIRST.md](CODE-FIRST.md) |
-| Bootstrap host into Railkit | [ADOPTION.md](ADOPTION.md) |

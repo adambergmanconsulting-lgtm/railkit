@@ -4,17 +4,17 @@
 
 ## Fast path (read first)
 
-- **Local:** `npm run check:railkit`
-- **CI:** [`.github/workflows/railkit-checks.yml`](../../.github/workflows/railkit-checks.yml) runs the same script
+- **Local:** the host umbrella (JS pack: `check-umbrella.js`). Steps: `documentation`, `ownership`, `architecture`, `ratchet`.
+- **CI:** the host workflow runs that same umbrella. Do not add a second remote-only gate.
+- **Resume:** `CHECK_FROM=<step>` skips earlier steps that already passed in this session.
 - **Skill:** `ci-gate` — what to run when merge fails or before push
-- **Do not:** invent remote-only gates that humans cannot run locally
 
 ## Mental model
 
 | Stage | Role |
 |-------|------|
-| **Editor / pre-commit (optional)** | Fast lint or staged checks; wire Husky later ([scripts/ci/README.md](../../scripts/ci/README.md)) |
-| **Local package scripts** | Doc ownership + file-size ratchets (budgets that only get stricter) first (`check:railkit`); unused-export / Knip-or-equivalent via `check:unused-export` as Rank **7** on the same umbrella when ready |
+| **Editor / pre-commit (optional)** | Fast lint or staged checks; wire later ([ci/README.md](../../packs/js/ci/README.md)) |
+| **Local checks** | Doc ownership + file-size ratchets (budgets that only get stricter) first; unused-export via `check:unused-export` as Rank **7** on the same umbrella when ready |
 | **CI workflow** | Clean-room confirmation of the same scripts |
 | **Release** | Host-defined; skill `release` points here after the host fills the section |
 

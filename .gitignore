@@ -7,4 +7,4 @@ Thumbs.db
 !.env.example
 .cursor/
 !.gitkeep
-kit/scripts/architecture/architecture-ratchet-state.json
+kit/packs/js/architecture/architecture-ratchet-state.json

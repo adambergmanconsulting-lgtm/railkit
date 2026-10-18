@@ -76,7 +76,7 @@
 | Instrument | Clock |
 |------------|--------|
 | Knip-class | `check:unused-export` → `mode: queued`, owner=platform, due=YYYY-MM-DD — then `mode: knip` on umbrella |
-| Full e2e on every PR | Dated row in [rank7-dated-queue.md](../../templates/rank7-dated-queue.md) until harness cost is accepted |
+| Full e2e on every PR | Dated row in [deferred-checks.md](deferred-checks.md) until harness cost is accepted |
 | Vendor apply for cloud DNS | Same template; inventory already exists (link 5) |
 
 **Fail if inverted:** Fake Knip green day one while Rank 1 dual homes remain; or undated “we’ll do Knip later.”

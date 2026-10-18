@@ -12,7 +12,7 @@
 5. **Locked model: hybrid** — governing framework + **priced** change project; purpose of each part below.
 6. Buyer/seller value: [positioning.md — Value and purpose](positioning.md#value-and-purpose).
 7. [You / we / exit](#you--we--exit) — customer obligations and engagement done-bar.
-8. Customer keeps installable tree from [kit/](../../kit/) after the change project.
+8. Customer keeps the specialized rules and checks. Exit removes the Railkit name and the install paths.
 9. Every claim needs proof in `kit/` (script, skill, or owner doc). Landscape: [../competition/landscape.md](../competition/landscape.md).
 
 ## Locked model
@@ -22,7 +22,7 @@
 | Part | Purpose (plain) |
 |------|-----------------|
 | **Change project** | Paid expert judgment + kit applied to *this* host until foundation and a real working-loop win hold |
-| **Governing framework (`kit/`)** | What remains in the customer’s git so every editor keeps the same path after the engagement |
+| **Governing framework (`kit/`)** | The method installed during the engagement. At exit the host keeps the specialized rules, written as its own docs and checks |
 
 Buyer and seller value in one table: [positioning.md — Value and purpose](positioning.md#value-and-purpose).
 
@@ -45,14 +45,14 @@ Commercial card for the deal. Host go/no-go and role detail: [../consulting/chan
 
 | Side | Brings / does |
 |------|----------------|
-| **You (customer)** | Named decider who can close **dual homes** (two docs both deciding the same thing) on a clock; repo + CI/merge leverage; an active delivery seam this week; accept leaving `kit/` and not raising size/quality ceilings to unblock; staff time from eng (and product when journeys conflict); security/compliance when deploy/secrets stay tribal |
-| **We (engagement)** | Human expert + kit: inventory dual homes and tribal how; install skeleton; fill CANONICAL owners and Fast paths; baseline file-size ratchet (budget that only tightens); wire local=CI checks; tribal → code or dated queue; one on-contact win on a real seam with proof when behavior moves (governing Rank **2**); leave `kit/` in your repo |
-| **Exit (engagement done)** | Foundation + working loop exit checks hold ([ADOPTION.md](../../kit/docs/ADOPTION.md#exit-checks)). Ideal gates (unused-export / Knip-class, full e2e on CI, UI rails, vendor apply) are **shipped or on a dated queue** (owner + due date) — never fake green, never undated soft-skip |
+| **You (customer)** | Named decider who can close **dual homes** (two docs both deciding the same thing) on a clock; repo + CI/merge leverage; an active delivery seam this week; accept that exit leaves the rules as this repo's own docs and checks, and do not raise size/quality ceilings to unblock; staff time from eng (and product when journeys conflict); security/compliance when deploy/secrets stay tribal |
+| **We (engagement)** | Human expert + kit: inventory dual homes and tribal how; install skeleton; fill CANONICAL owners and Fast paths; baseline file-size ratchet (budget that only tightens); wire local=CI checks; tribal → code or dated queue; one on-contact win on a real seam with proof when behavior moves (governing Rank **2**); then run `--exit` so the host tree no longer says Railkit |
+| **Exit (engagement done)** | Foundation + working loop exit checks hold ([ADOPTION.md](../../kit/docs/ADOPTION.md#exit-checks)). `--exit` deletes the install manual, the adopt playbook, `scripts/railkit/`, and the product name. Ideal gates (unused-export / Knip-class or the host's equivalent, full e2e on CI, UI rails, vendor apply) are **shipped or on a dated queue** (owner + due date). Never fake green. Never an undated soft-skip. What remains reads as the host's engineering system |
 | **Not the exit metric** | A promised productivity % or “stay under ~USD 200/mo tool spend” ([why-railkit.md](why-railkit.md); [usp-moat.md](usp-moat.md#do-not-claim)) |
 
 ### Engagement success (say this)
 
-Fewer wrong-doc sessions; behavior changes leave proof; merge checks that do not loosen; governing framework still in git after we leave. Report progress only against in-repo evidence ([ADOPTION.md — When status is reportable](../../kit/docs/ADOPTION.md#when-status-is-reportable)).
+Fewer wrong-doc sessions; behavior changes leave proof; merge checks that do not loosen; after we leave, the rules are native to the host (no Railkit name, no install paths). Report progress only against in-repo evidence ([ADOPTION.md — When status is reportable](../../kit/docs/ADOPTION.md#when-status-is-reportable)).
 
 ### Phase timebox (illustrative)
 
@@ -67,9 +67,9 @@ Duration is **set per engagement** after inventory — not a fixed catalog price
 
 ## What the customer keeps
 
-- Contents of `kit/` merged into the host (docs hubs, agents, adapters, scripts, infra contracts, templates).
-- Green or intentionally baselined `npm run check:railkit` (or host merge).
-- Filled CANONICAL owners and an adopt inventory (tribal how → code queue).
+- Filled owners, skills, and checks, written as the host repo.
+- A green or intentionally baselined host umbrella (engagement name `check:railkit`, renamed to `check:quality` at exit).
+- An adopt receipt with the brand stripped. Tribal how is either code or a dated row.
 
 ## What the change project delivers
 
@@ -86,3 +86,4 @@ Duration is **set per engagement** after inventory — not a fixed catalog price
 - Soft skippable nudges or undated eternal queues as “done enough.”
 - Zero human decisions (**dual homes** — two deciding docs for one thing — and heuristic forks still stop the agent).
 - Sale of Cursor / Copilot / model seats, or that the engagement fee is the customer’s tool subscription.
+- A permanently branded install tree left inside the customer repo.

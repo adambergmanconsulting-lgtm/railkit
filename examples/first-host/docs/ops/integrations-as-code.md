@@ -7,7 +7,7 @@
 - Put desired state in [`infra/contracts/`](../../infra/contracts/) (JSON/YAML).
 - Prefer assert/apply scripts under `infra/scripts/` (owned by the host).
 - Docs explain why and link; they do not replace the contract.
-- During adopt: list portal-only steps; script them or give them an owner and due date ([ADOPTION.md](../ADOPTION.md)).
+- During adopt: list portal-only steps; script them or give them an owner and due date ([ADOPTION.md](./governing-priorities.md)).
 
 ## Prefer / Avoid
 

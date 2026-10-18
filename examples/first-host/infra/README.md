@@ -7,4 +7,4 @@ Hosting, DNS, edge, and vendor **contracts** live here as code ([docs/CODE-FIRST
 | [contracts/](contracts/) | Desired-state JSON/YAML |
 | `scripts/` (host-owned) | Assert / apply against providers |
 
-Railkit ships an example contract only. Do not commit secrets.
+The example contract is a shape to replace. Do not commit secrets.

@@ -131,3 +131,73 @@ test('trim-adopt removes the install manual from deciding homes', () => {
   );
   assert.deepEqual(budgets.roots, ['apps', 'packages']);
 });
+
+test('default copy does not use the product name', () => {
+  const host = freshHost();
+  run(host);
+  const hits = [];
+  const walk = (dir) => {
+    for (const name of fs.readdirSync(dir)) {
+      const abs = path.join(dir, name);
+      if (fs.statSync(abs).isDirectory()) {
+        walk(abs);
+        continue;
+      }
+      const text = fs.readFileSync(abs, 'utf8');
+      if (text.includes('Railkit')) hits.push(path.relative(host, abs));
+    }
+  };
+  walk(host);
+  assert.deepEqual(hits, []);
+});
+
+test('exit cutover leaves a native host', () => {
+  const host = freshHost();
+  fs.mkdirSync(path.join(host, 'src'));
+  run(host);
+  fs.writeFileSync(
+    path.join(host, 'package.json'),
+    `${JSON.stringify(
+      {
+        name: 'sample-host',
+        scripts: {
+          'check:documentation':
+            'node scripts/railkit/documentation/check-documentation.js',
+          'check:railkit': 'node scripts/railkit/check-umbrella.js',
+        },
+      },
+      null,
+      2
+    )}\n`
+  );
+  fs.writeFileSync(
+    path.join(host, 'docs/ops/rank7-dated-queue.md'),
+    '# legacy queue\n'
+  );
+  run(host, ['--exit']);
+
+  assert.equal(fs.existsSync(path.join(host, 'docs/ADOPTION.md')), false);
+  assert.equal(fs.existsSync(path.join(host, 'docs/00-QUICK-START.md')), false);
+  assert.equal(fs.existsSync(path.join(host, 'scripts/railkit')), false);
+  assert.equal(fs.existsSync(path.join(host, 'agents/skills/adopt.md')), false);
+  assert.equal(
+    fs.existsSync(path.join(host, 'scripts/documentation/check-documentation.js')),
+    true
+  );
+  assert.equal(fs.existsSync(path.join(host, 'docs/ops/deferred-checks.md')), true);
+  assert.equal(fs.existsSync(path.join(host, 'docs/ops/rank7-dated-queue.md')), false);
+
+  const pkg = JSON.parse(fs.readFileSync(path.join(host, 'package.json'), 'utf8'));
+  assert.equal(pkg.scripts['check:railkit'], undefined);
+  assert.match(pkg.scripts['check:quality'], /check-umbrella\.js/);
+  assert.match(pkg.scripts['check:documentation'], /scripts\/documentation\//);
+
+  const ownership = JSON.parse(
+    fs.readFileSync(
+      path.join(host, 'scripts/documentation/documentation-ownership.json'),
+      'utf8'
+    )
+  );
+  assert.equal(ownership.decidingHomes.includes('docs/ADOPTION.md'), false);
+  assert.equal(ownership.decidingHomes.includes('docs/00-QUICK-START.md'), false);
+});

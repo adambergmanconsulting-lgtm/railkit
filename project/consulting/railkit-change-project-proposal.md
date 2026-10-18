@@ -37,9 +37,9 @@ Summary — full card: [../marketing/offer-model.md](../marketing/offer-model.md
 
 | You | We | Done when |
 |-----|-----|-----------|
-| Named decider; repo + CI leverage; live seam; keep `kit/`; do not raise ceilings to unblock | Expert + kit: owners, baselined checks, tribal inventory, on-contact win with proof if behavior moves | Foundation + working loop exit checks hold; ideal items shipped **or** dated-queued ([ADOPTION.md](../../kit/docs/ADOPTION.md#exit-checks)) |
+| Named decider; repo + CI leverage; live seam; accept a native exit; do not raise ceilings to unblock | Expert + kit: owners, baselined checks, tribal inventory, on-contact win with proof if behavior moves, then `--exit` | Foundation + working loop hold; ideal items shipped **or** dated-queued; host tree has no Railkit name ([ADOPTION.md](../../kit/docs/ADOPTION.md#exit-cutover)) |
 
-**Success language:** fewer wrong-doc sessions; proof on behavior changes; merge bar that does not loosen; kit still in git after we leave. **Not** a promised 2–4×.
+**Success language:** fewer wrong-doc sessions; proof on behavior changes; merge bar that does not loosen; after we leave the rules are the host's own. **Not** a promised 2–4×.
 
 ## Phases (duration set per engagement)
 

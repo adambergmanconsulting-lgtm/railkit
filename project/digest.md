@@ -45,7 +45,7 @@ An **instrument** here is a check or tool that serves a priority rank. Yardstick
 | Foundation | Intent router + CANONICAL + Fast paths | Templates | Fill owners |
 | Foundation | `check:documentation*` | Yes | Local + CI |
 | Foundation | `check:architecture*` (size ratchet) | Yes | **Baseline** ceilings (warn 400 / max 800 defaults); shrink on contact — [size/cost reasoning](../kit/docs/ops/code-quality-and-refactor.md#size-ratchets-breakpoints-and-cost) |
-| Foundation | `check:railkit` umbrella = local CI | Yes | Same entrypoints |
+| Foundation | Host umbrella = local and CI (engagement name `check:railkit`; `check:quality` after exit) | Yes | Same entrypoints |
 | Foundation | Thin adapters + skills; agent auto-loop | Yes | Session rules load AGENTS stop allowlist |
 | Working loop | Tribal inventory; on-contact win + Rank 2 proof | Playbook | Real seam |
 | Ideal (clock) | `check:unused-export` (Knip-class or dated queue) | Stub + JSON clock | `mode: knip` or refresh `owner`/`due` |

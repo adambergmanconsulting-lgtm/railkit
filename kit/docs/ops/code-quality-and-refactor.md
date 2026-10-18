@@ -7,7 +7,7 @@
 - **Dedupe:** one owner module for non-trivial logic/copy/config; reference, do not copy-paste.
 - **Net simpler:** delete or inline unused scaffolding before wrapping; future shape needs a named owner destination.
 - **First-pass splits:** `parent/<feature>/` + `index.ts` (or language equivalent) in the same change; index re-exports only the external surface.
-- **Ratchets:** extract and tighten; never raise ceilings to unblock ([architecture-ratchet.json](../../scripts/architecture/architecture-ratchet.json)) — instrument (check/tool that serves a rank) of [governing-priorities.md](governing-priorities.md) Ranks **4** and **6**.
+- **Ratchets:** extract and tighten; never raise ceilings to unblock ([architecture-ratchet.json](../../packs/js/architecture/architecture-ratchet.json)) — instrument (check/tool that serves a rank) of [governing-priorities.md](governing-priorities.md) Ranks **4** and **6**.
 - **Breakpoints (defaults):** warn **400** lines; max **800** lines — see [Size ratchets and cost](#size-ratchets-breakpoints-and-cost).
 - **First pass ≠ mass shrink:** foundation **baselines** the ratchet; shrink **on contact** (when you open a file for real work), not a day-one sweep.
 - **Trend gates:** instruments of those ranks; sequence and customer depth: [governing-priorities.md](governing-priorities.md), [ADOPTION.md](../ADOPTION.md#correct-sequence).
@@ -41,7 +41,7 @@ Instruments of [governing-priorities.md](governing-priorities.md) Ranks **4** an
 |------------|-----------|------------------------|
 | Doc ownership / budgets | `check:documentation*` | Wire for Rank **1** |
 | File-size / hotspot ratchet | `check:architecture*` | Baseline ceilings (Ranks **4**, **6**); set `roots` to host packages |
-| Unused exports / dead modules | `check:unused-export` + [`unused-export.json`](../../scripts/unused-export/unused-export.json) | Mode `knip` or `queued` (owner + due); language-equivalent tool per matrix below |
+| Unused exports / dead modules | `check:unused-export` + [`unused-export.json`](../../packs/js/unused-export/unused-export.json) | Mode `knip` or `queued` (owner + due); language-equivalent tool per matrix below |
 
 **Fail if:** claiming Rank **4/6** while Rank **1** dual homes (two docs both deciding the same thing) remain. **Should:** Knip-class still queued with owner + date after foundation exit. **Must:** undated / ownerless eternal soft skip of Knip-class when it is a named ideal for the host.
 
@@ -55,7 +55,7 @@ Instruments of [governing-priorities.md](governing-priorities.md) Ranks **4** an
 | .NET | IDE analyzers / custom unused public API gates | Same |
 | Other | Host-chosen unused-export detector | Must be checkable locally + CI; else Rank **7** clock |
 
-Template for non-unused Rank **7** rows: [rank7-dated-queue.md](../../templates/rank7-dated-queue.md).
+Template for non-unused Rank **7** rows: [deferred-checks.md](deferred-checks.md).
 
 ### Architecture `roots` examples
 
@@ -79,7 +79,7 @@ In `architecture-budgets.json` (next to the architecture check scripts):
 
 ## Size ratchets, breakpoints, and cost
 
-Owns the **reasoning** for file-size instruments (Ranks **4**/**6**). Token/commercial heuristics: [change-project-qualification.md](../../../project/consulting/change-project-qualification.md#token-spending-heuristics) (monorepo; not installed into hosts). Adopt timing: [ADOPTION.md](../ADOPTION.md#4-file-size-ratchets-foundation).
+Owns the **reasoning** for file-size instruments (Ranks **4**/**6**). Commercial token heuristics stay with the seller and are not part of this repo. Adopt timing during an engagement: [ADOPTION.md](../ADOPTION.md#4-file-size-ratchets-foundation).
 
 ### What foundation does (and does not)
 
@@ -93,7 +93,7 @@ Owns the **reasoning** for file-size instruments (Ranks **4**/**6**). Token/comm
 
 ### Breakpoints (kit defaults)
 
-Configured in [`architecture-budgets.json`](../../scripts/architecture/architecture-budgets.json) (hosts may specialize; ceilings only tighten afterward):
+Configured in [`architecture-budgets.json`](../../packs/js/architecture/architecture-budgets.json) (hosts may specialize; ceilings only tighten afterward):
 
 | Knob | Default | Effect |
 |------|---------|--------|

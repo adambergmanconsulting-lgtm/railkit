@@ -45,6 +45,12 @@ Plain-language rules: [docs/DOCUMENTATION-PRINCIPLES.md — Plain language](docs
 5. **Review skills** — structure, layering, stability, UI, fit against named yardsticks.
 6. **Code-first** — checks, CI, contracts, and agent procedures live in the repo.
 
+## Packs and exit
+
+Principles in `docs/` and `agents/` do not require a language or an editor. JS/TS checks: [packs/js](packs/js/). Cursor adapter: [adapters/cursor](adapters/cursor/). Index: [packs/README.md](packs/README.md).
+
+When the engagement ends, run `node scripts/install/copy-kit-to-host.js --target <host> --exit`. The host keeps the rules. The product name and install paths come out. Detail: [docs/ADOPTION.md](docs/ADOPTION.md#exit-cutover).
+
 ## Checks
 
 ```bash

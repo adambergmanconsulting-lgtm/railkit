@@ -1,0 +1,46 @@
+{
+  "areas": {
+    "hub": {
+      "globs": [
+        "docs/CANONICAL-SOURCES.md",
+        "docs/DOCUMENTATION-PRINCIPLES.md",
+        "docs/CODE-FIRST.md",
+        "docs/WHY.md",
+        "AGENTS.md"
+      ],
+      "max": 300,
+      "warn": 250
+    },
+    "product": {
+      "globs": [
+        "docs/product/**/*.md"
+      ],
+      "max": 500,
+      "warn": 400
+    },
+    "engineering": {
+      "globs": [
+        "docs/engineering/**/*.md"
+      ],
+      "max": 500,
+      "warn": 400
+    },
+    "ops": {
+      "globs": [
+        "docs/ops/**/*.md"
+      ],
+      "max": 400,
+      "warn": 300
+    },
+    "indexes": {
+      "globs": [
+        "README.md"
+      ],
+      "max": 200,
+      "warn": 180
+    }
+  },
+  "skip": [
+    "docs/wip/**"
+  ]
+}

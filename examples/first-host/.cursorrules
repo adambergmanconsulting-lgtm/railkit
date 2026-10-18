@@ -1,6 +1,6 @@
 # Agent session rules (template)
 
-Copy into the host as `.cursorrules`, Claude project instructions, or equivalent. Adjust paths if Railkit files live under a subfolder. Full intent table: README.md (Start here by intent). `llm.txt` is a short mirror only.
+Copy into the host as `.cursorrules`, Claude project instructions, or equivalent. Adjust paths if these files live under a subfolder. Full intent table: README.md (Start here by intent). `llm.txt` is a short mirror only.
 
 ## Session start
 
@@ -10,7 +10,6 @@ Before first edit: name the task in one sentence; open only that row's owner Fas
 
 ## Compressed intent list
 
-- install / adopt -> docs/00-QUICK-START.md ; docs/ADOPTION.md ; skill adopt
 - implement / fix / refactor -> AGENTS.md -> docs/CANONICAL-SOURCES.md (one row)
 - code-first / tribal to code -> docs/CODE-FIRST.md
 - CI / merge -> docs/ops/ci-flow.md ; skill ci-gate

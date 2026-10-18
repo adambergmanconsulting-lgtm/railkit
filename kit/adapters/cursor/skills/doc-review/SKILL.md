@@ -1,7 +1,7 @@
 ---
 name: doc-review
 description: >-
-  Use when editing or reviewing docs: kit/docs, project/**, or monorepo README.
+  Use when editing or reviewing docs structure, ownership, or plain language.
   Checks one deciding owner, indexes vs caches, plain language, hub routing.
   Commercial pitch jobs (sell/buyer/bring/exit) hand off to engagement-review.
   Canonical body: agents/skills/doc-review.md. Not a second policy tree.

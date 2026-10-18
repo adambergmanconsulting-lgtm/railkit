@@ -1,7 +1,7 @@
 # Why this framework
 
 **Owns:** why apply the governing framework to a host codebase — goal, means pointers, durable hedge.  
-**Does not own:** commercial salary/tool illustrations or offer model (Railkit monorepo `project/` only); doc-structure ranks ([DOCUMENTATION-PRINCIPLES.md](DOCUMENTATION-PRINCIPLES.md)); size breakpoints ([ops/code-quality-and-refactor.md](ops/code-quality-and-refactor.md#size-ratchets-breakpoints-and-cost)).
+**Does not own:** commercial salary or offer numbers (those stay with the seller, not in this repo); doc-structure ranks ([DOCUMENTATION-PRINCIPLES.md](DOCUMENTATION-PRINCIPLES.md)); size breakpoints ([ops/code-quality-and-refactor.md](ops/code-quality-and-refactor.md#size-ratchets-breakpoints-and-cost)).
 
 **Meta** — Keep this short. Point at how owners; do not restate their tables.
 
@@ -16,7 +16,7 @@
 
 LLM-assisted editing is cheap relative to a developer’s loaded cost when sessions stay short and on the right owner. Without shared situating and size discipline, token spend and rework erase that advantage. This framework exists so the host clears (and keeps clearing) that bar toward coherence, efficiency, clarity, and quality.
 
-Commercial illustration numbers (salary, subscription class, golden-application observations) live only in the Railkit monorepo `project/` surface and are **not** installed into hosts. Mechanism here is host-safe.
+Commercial illustration numbers (salary, subscription class, worked examples) stay with the seller. They are not part of this repo. The mechanism here is what the host keeps.
 
 ## Means
 

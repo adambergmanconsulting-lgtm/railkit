@@ -1,6 +1,6 @@
 # Host product (replace after install)
 
-**Governing framework installed.** Specialize this file for the host product. Do not keep monorepo `project/` links.
+**Working agreements installed.** Specialize this file for the host product. Do not keep seller-doc links.
 
 ## Start here by intent
 
@@ -19,3 +19,5 @@
 ```bash
 npm run check:railkit
 ```
+
+The engagement umbrella name is `check:railkit`. Exit renames it to `check:quality`. JS pack resume: `CHECK_FROM=documentation|ownership|architecture|ratchet`.

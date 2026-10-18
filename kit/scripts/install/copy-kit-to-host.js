@@ -9,15 +9,19 @@
  * Default packs: core, ui, fit.
  * Opt in: --packs hosting (infra contract), --packs seller (engagement-review; monorepo only).
  * After adopt: --trim-adopt drops the install manual from the host deciding homes.
+ * Engagement end: --exit (no recopy) moves scripts into the host tree, renames the
+ * umbrella, deletes the install manual and adopt playbook, and fails if the brand remains.
  */
 
 const fs = require('fs');
 const path = require('path');
+const { exitHost } = require('./exit-host');
 
 const kitRoot = path.resolve(__dirname, '../..');
 const GITHUB = 'https://github.com/adambergmanconsulting-lgtm/railkit';
 const DEFAULT_PACKS = ['core', 'ui', 'fit'];
-const KIT_ROOTS = ['scripts', 'agents', 'adapters'];
+const KIT_ROOTS = ['packs', 'scripts', 'agents', 'adapters'];
+const UMBRELLA_AFTER_EXIT = 'check:quality';
 
 function parseArgs(argv) {
   const out = {
@@ -25,6 +29,7 @@ function parseArgs(argv) {
     scriptsLayout: 'railkit',
     packs: new Set(DEFAULT_PACKS),
     trimAdopt: false,
+    exit: false,
   };
   for (let i = 2; i < argv.length; i++) {
     if (argv[i] === '--target') out.target = argv[++i];
@@ -38,6 +43,7 @@ function parseArgs(argv) {
       );
       out.packs.add('core');
     } else if (argv[i] === '--trim-adopt') out.trimAdopt = true;
+ else if (argv[i] === '--exit') out.exit = true;
     else if (argv[i] === '--help' || argv[i] === '-h') out.help = true;
   }
   return out;
@@ -92,10 +98,10 @@ function hostRelToKitRel(hostRel, scriptsLayout) {
     return `kit/adapters/cursor/skills/${n.slice('.cursor/skills/'.length)}`;
   }
   if (scriptsLayout === 'merge' && n.startsWith('scripts/')) {
-    return `kit/scripts/${n.slice('scripts/'.length)}`;
+    return `kit/packs/js/${n.slice('scripts/'.length)}`;
   }
   if (n.startsWith('scripts/railkit/')) {
-    return `kit/scripts/${n.slice('scripts/railkit/'.length)}`;
+    return `kit/packs/js/${n.slice('scripts/railkit/'.length)}`;
   }
   return null;
 }
@@ -118,11 +124,11 @@ function rewriteLinks(text, kitRel, skippedKitRels, scriptsLayout) {
     );
     if (
       scriptsLayout === 'railkit' &&
-      resolved.startsWith('kit/scripts/') &&
-      !kitRel.startsWith('kit/scripts/')
+      resolved.startsWith('kit/packs/js/') &&
+      !kitRel.startsWith('kit/packs/js/')
     ) {
       const hostSource = kitRel.slice('kit/'.length);
-      const target = `scripts/railkit/${resolved.slice('kit/scripts/'.length)}`;
+      const target = `scripts/railkit/${resolved.slice('kit/packs/js/'.length)}`;
       const rel = path.posix.relative(path.posix.dirname(hostSource), target);
       return `](${rel}${hash})`;
     }
@@ -264,13 +270,10 @@ function patchDocumentationBudgets(host, scriptsDest) {
 function patchScriptsReadme(scriptsDest) {
   const readme = path.join(scriptsDest, 'README.md');
   if (!fs.existsSync(readme)) return;
-  let text = fs.readFileSync(readme, 'utf8').replace(
-    /CI: \[`\.github\/workflows\/railkit-checks\.yml`\]\([^)]+\)\. Dogfood host CI: \[`first-host-checks\.yml`\]\([^)]+\)\. Dated queue template: \[templates\/rank7-dated-queue\.md\]\([^)]+\)\./,
-    'CI runs `npm run check:railkit` from the host workflow. Pull requests use `templates/pr-checks.yml` in the kit. Dated queue: `docs/ops/rank7-dated-queue.md`.'
-  );
-  if (path.basename(scriptsDest) === 'railkit') {
-    text = text.replace(/\]\(\.\.\/docs\//g, '](../../docs/');
-  }
+  if (path.basename(scriptsDest) === 'railkit') return;
+  const text = fs
+    .readFileSync(readme, 'utf8')
+    .replace(/\]\(\.\.\/\.\.\/docs\//g, '](../docs/');
   fs.writeFileSync(readme, text);
 }
 
@@ -297,16 +300,33 @@ function main() {
   const args = parseArgs(process.argv);
   if (args.help || !args.target) {
     console.log(`Usage: node copy-kit-to-host.js --target <hostDir> [--scripts-merge] [--packs core,ui,fit,hosting,seller] [--trim-adopt]
-
-Copies the kit skeleton into the host. Does not copy monorepo project/.
+       node copy-kit-to-host.js --target <hostDir> --exit
+Copies the framework into the host. Does not copy the seller project/ tree.
 Default packs: core, ui, fit. Hosting and seller are opt-in.
-Omits docs/MAP.md, the rank-chain teaching story, and monorepo-relative links (rewritten to GitHub).
-When the host has src/ (or apps/ and packages/), architecture roots leave the kit default.
---trim-adopt removes docs/00-QUICK-START.md from deciding homes and adds docs/ops/adopt-receipt.md if missing.`);
+Omits docs/MAP.md and the rank-chain teaching story. Links outside the framework are rewritten to GitHub.
+When the host has src/ (or apps/ and packages/), architecture roots leave the framework default.
+--trim-adopt removes docs/00-QUICK-START.md and adds docs/ops/adopt-receipt.md if missing.
+--exit does not recopy. It moves scripts/railkit into scripts/, renames check:railkit to check:quality, deletes the install manual and adopt playbook, and fails if Railkit, check:railkit, or scripts/railkit remain.`);
     process.exit(args.help ? 0 : 1);
   }
 
   const host = path.resolve(process.cwd(), args.target);
+  if (args.exit) {
+    if (!fs.existsSync(host)) {
+      console.error(`exit: target does not exist: ${host}`);
+      process.exit(1);
+    }
+    exitHost(host, {
+      walkFiles,
+      rm,
+      patchOwnership,
+      patchDocumentationBudgets,
+      umbrellaName: UMBRELLA_AFTER_EXIT,
+    });
+    console.log(`exit OK -> ${host}`);
+    console.log(`umbrella: ${UMBRELLA_AFTER_EXIT}`);
+    return;
+  }
   fs.mkdirSync(host, { recursive: true });
 
   copyDir(path.join(kitRoot, 'docs'), path.join(host, 'docs'));
@@ -318,7 +338,11 @@ When the host has src/ (or apps/ and packages/), architecture roots leave the ki
     args.scriptsLayout === 'merge'
       ? path.join(host, 'scripts')
       : path.join(host, 'scripts', 'railkit');
-  copyDir(path.join(kitRoot, 'scripts'), scriptsDest, { skip: ['install'] });
+  copyDir(path.join(kitRoot, 'packs', 'js'), scriptsDest);
+  copyFile(
+    path.join(kitRoot, 'adapters', 'cursor', 'check-always-on-rules.js'),
+    path.join(scriptsDest, 'editor', 'check-always-on-rules.js')
+  );
 
   if (args.packs.has('hosting')) {
     copyDir(path.join(kitRoot, 'infra'), path.join(host, 'infra'));
@@ -333,10 +357,6 @@ When the host has src/ (or apps/ and packages/), architecture roots leave the ki
   copyFile(
     path.join(kitRoot, 'adapters', 'README.md'),
     path.join(host, 'adapters', 'README.md')
-  );
-  copyFile(
-    path.join(kitRoot, 'templates', 'rank7-dated-queue.md'),
-    path.join(host, 'docs', 'ops', 'rank7-dated-queue.md')
   );
 
   if (!fs.existsSync(path.join(host, 'README.md'))) {

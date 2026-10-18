@@ -27,7 +27,7 @@
 | Code-first principle | [CODE-FIRST.md](CODE-FIRST.md) |
 | Why apply this framework | [WHY.md](WHY.md) |
 | CI / script inputs (JSON) | Next to consumer under `scripts/` or `infra/` — not under `docs/` |
-| Railkit offer / marketing / competition / consulting / engagement qualification | Sibling monorepo `project/` (not installed into hosts) |
+| Seller offer, marketing, competition, consulting | Not part of this repo |
 
 ## Authority when docs disagree
 
@@ -48,7 +48,7 @@
 | **4** | Layer honesty | Decide ≠ index ≠ claim ≠ journey ≠ **cache** |
 | **5** | Why vs how | Long how that duplicates a script |
 | **6** | Thin adapters | Second policy tree in an editor folder |
-| **7** | Single intent router | Parallel Start Here tables outside the active root README (host root after install; monorepo root vs `kit/README` / `project/README` is intentional) |
+| **7** | Single intent router | Parallel Start Here tables outside the active root README |
 
 **Cache (human aggregate):** last resort only — e.g. a shareable digest when the job is “one packet,” not “decide this contract.” It may paraphrase. It does not decide. Prefer fixing owners and the intent router so the cache is unnecessary. If a cache exists: list upstream owners; refresh it when they change.
 
@@ -56,14 +56,14 @@
 
 ## Plain language
 
-**Owns:** how kit (and host) docs should read. Commercial `project/` docs follow this Prefer/Avoid via pointer — they do not keep a second prose rulebook.
+**Owns:** how these docs should read. Seller docs follow this Prefer/Avoid by pointer. They do not keep a second prose rulebook.
 
 | Prefer | Avoid |
 |--------|--------|
 | Short, direct sentences; one idea per sentence when it stays clear | Stacked abstractions and nested clauses that hide the point |
 | Everyday words; say what to do | Unexplained jargon, buzzwords, or kit slang without a first-use definition |
 | Name the thing (file, command, rank) once in plain words, then use the short name | Acronyms or rank nicknames as the only explanation |
-| Tables and fail-if that a new editor can apply | Prose that assumes the reader already lives in Railkit vocabulary |
+| Tables and fail-if that a new editor can apply | Prose that assumes the reader already knows these terms |
 | Define a kit term on first use (or link the owner Fast path) | “Instrument,” “situating,” “ratchet,” etc. with no gloss for a first-time host reader |
 
 **Words we use (short glossary):**
@@ -78,7 +78,7 @@
 | Dated / clocked queue | Deferred work with a named owner and due date |
 | Actor-agnostic | Same rules for humans and agents |
 
-**Fail if:** a deciding doc cannot be followed by a competent eng lead who has not seen Railkit before, without a glossary hunt.
+**Fail if:** a deciding doc cannot be followed by a competent eng lead who is new to this repo, without a glossary hunt.
 
 UI product strings are a different yardstick ([ui-naming.md](product/heuristics/ui-naming.md)).
 
@@ -110,11 +110,24 @@ Fix toward the yardstick in the same turn when the Prefer/Avoid still fits the j
 
 Do not silently ignore Prefer/Avoid. Do not grow a second policy tree in the skill or chat. Heuristic forks that need a human pick still stop per [AGENTS.md](../AGENTS.md#agent-stop-allowlist).
 
+### Code-work situating (token bar)
+
+Shared Prefer/Avoid for implement / fix / refactor. No separate situate skill.
+
+| Prefer | Avoid |
+|--------|--------|
+| One-sentence seam + outcome; pin **1–3** concrete paths | Re-reading the whole owner essay every turn |
+| Fresh chat when the seam or outcome changes | One thread across unrelated seams |
+| Sticky lock brief (5–8 lines: locked decisions, next step, files) | Re-pasting the whole plan every message |
+| Extra read only for the current fail-if | Sibling specs "just in case" |
+
 ## Mechanical gates
 
-| Gate | Command |
-|------|---------|
-| Line budgets | `npm run check:documentation` |
-| Fast path + one owner per Open cell | `npm run check:documentation:ownership` |
+The JS pack command names are below. Other stacks use the host's equivalent checks. Run them with the host's package runner.
 
-Budgets: [`scripts/documentation/documentation-budgets.json`](../scripts/documentation/documentation-budgets.json).
+| Gate | JS pack command |
+|------|-----------------|
+| Line budgets | `check:documentation` |
+| Fast path + one owner per Open cell | `check:documentation:ownership` |
+
+Budgets: [`documentation-budgets.json`](../packs/js/documentation/documentation-budgets.json).

@@ -1,4 +1,4 @@
-# Code work entry (Railkit)
+# Code work entry
 
 **Not the session start table.** If the job is not implement / fix / refactor, use [README.md](README.md#start-here-by-intent). This file is only the **code work** path.
 
@@ -33,8 +33,8 @@ If an agent is editing: **do the work** — fix must/should issues, run skills a
 - **Dead code:** keep new helpers private unless a second file imports them in the same change. Delete or unexport when importers go away.
 - **Size budgets (ratchets):** extract and tighten; do not raise `architecture-ratchet` ceilings to pass CI.
 - **Thin boundaries:** HTTP/UI shells parse and call; domain modules own persistence and side effects ([application-layering.md](docs/engineering/architecture/application-layering.md)).
-- **Wrap-up:** when exports change, run unused-export / Knip-class if wired; always run `npm run check:architecture` (and doc checks when docs change) and fix in-tree. Order: [ADOPTION.md](docs/ADOPTION.md#correct-sequence).
+- **Wrap-up:** when exports change, run the unused-export check if it is wired; always run the architecture check (and doc checks when docs change) and fix in-tree. Rank order: [governing-priorities.md](docs/ops/governing-priorities.md).
 
-## Kit maintenance
+## Maintaining these rules
 
-When changing Railkit itself: same situating rules; keep adapters thin ([adapters/README.md](adapters/README.md)); Prefer/Avoid stay in owner docs, not in Cursor frontmatter.
+Same situating rules. Keep adapters thin ([adapters/README.md](adapters/README.md)). Prefer/Avoid stay in owner docs, not in editor frontmatter. Pin 1–3 paths while iterating ([DOCUMENTATION-PRINCIPLES.md](docs/DOCUMENTATION-PRINCIPLES.md#code-work-situating-token-bar)).

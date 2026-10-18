@@ -1,8 +1,8 @@
-# Railkit compressed intent mirror
+# Compressed intent mirror
 
 Any LLM / agent tool may load this file. Full table: README.md (Start here by intent).
 
-Session: pick one intent. Name the task in one sentence. Open only that owner Fast path before first edit. Re-open the right doc when blocked or the work shifts.
+Session: pick one intent. Name the task in one sentence. Open only that owner Fast path before first edit. Re-open the right doc when blocked or the work shifts. While implementing: pin 1–3 paths, start a fresh chat when the seam changes, keep a 5–8 line lock brief (docs/DOCUMENTATION-PRINCIPLES.md#code-work-situating-token-bar).
 
 - install / merge into host -> docs/00-QUICK-START.md
 - adopt / bootstrap existing docs -> docs/ADOPTION.md ; skill adopt

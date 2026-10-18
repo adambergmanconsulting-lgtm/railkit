@@ -1,0 +1,7 @@
+{
+  "mode": "queued",
+  "tool": "knip",
+  "owner": "maintainer",
+  "due": "2026-10-15",
+  "notes": "Set mode knip when the host's unused-export tool is ready, or refresh owner and due. JS default tool is Knip. Other stacks put their command in command/args or stay queued."
+}

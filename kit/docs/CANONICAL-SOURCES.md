@@ -49,4 +49,4 @@
 | UI chrome conflict | [ui-principles.md](product/heuristics/ui-principles.md) |
 | Should we build this (fit) | [customer-fit.md](product/heuristics/customer-fit.md) |
 | Portal / deploy / DNS only in wiki | [CODE-FIRST.md](CODE-FIRST.md) |
-| Bootstrap host into Railkit | [ADOPTION.md](ADOPTION.md) |
+| Bootstrap this repo's owners and checks | [ADOPTION.md](ADOPTION.md) |

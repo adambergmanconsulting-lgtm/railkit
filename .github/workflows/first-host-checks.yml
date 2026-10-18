@@ -5,10 +5,12 @@ on:
     paths:
       - 'examples/first-host/**'
       - 'kit/scripts/**'
+      - 'kit/packs/**'
   pull_request:
     paths:
       - 'examples/first-host/**'
       - 'kit/scripts/**'
+      - 'kit/packs/**'
 
 jobs:
   check:
@@ -21,7 +23,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Railkit gates on first-host
-        run: npm run check:railkit
+      - name: Host gates on first-host
+        run: npm run check:quality
       - name: Catalog seam tests
         run: npm run test:catalog

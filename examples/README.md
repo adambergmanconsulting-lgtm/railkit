@@ -11,9 +11,9 @@ Monorepo practice hosts that dogfood the kit. **Not** part of the installable `k
 | Why a dedicated first-host | Keeps install/adopt proof separate from any prior product repo |
 | Why not MiniDataMesh | No git / CI you can change at qualify time (no-go / re-scope until merge leverage exists) |
 | Receipt | [first-host/docs/ops/adopt-receipt.md](first-host/docs/ops/adopt-receipt.md) |
-| Checks | `npm --prefix examples/first-host run check:railkit` |
+| Checks | `npm --prefix examples/first-host run check:quality` |
 
-Improve the kit by feeding must/should findings from this host into kit owners ([ADOPTION.md](../kit/docs/ADOPTION.md#improve-the-kit-after-a-host-apply)).
+Improve the framework by feeding must/should findings from this host into kit owners ([ADOPTION.md](../kit/docs/ADOPTION.md#improve-the-framework-after-a-host-apply)). first-host is the post-exit dogfood: its tree does not keep the product name.
 
 ## Rank chain (teaching)
 

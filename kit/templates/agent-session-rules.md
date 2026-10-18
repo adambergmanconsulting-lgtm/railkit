@@ -1,6 +1,6 @@
 # Agent session rules (template)
 
-Copy into the host as `.cursorrules`, Claude project instructions, or equivalent. Adjust paths if Railkit files live under a subfolder. Full intent table: README.md (Start here by intent). `llm.txt` is a short mirror only.
+Copy into the host as `.cursorrules`, Claude project instructions, or equivalent. Adjust paths if these files live under a subfolder. Full intent table: README.md (Start here by intent). `llm.txt` is a short mirror only.
 
 ## Session start
 

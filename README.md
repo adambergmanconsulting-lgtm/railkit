@@ -30,7 +30,7 @@ Index only. Business surface detail: [project/README.md](project/README.md).
 
 **Stack:** No hard language lock-in ([qualification](project/consulting/change-project-qualification.md)). Shipped kit scripts and dogfood default to **JS/TS (npm)**; ideal unused-export depth uses Knip or a language equivalent.
 
-**Two parts (pointers only):** priced change project + governing framework left in the host — [offer-model You / we / exit](project/marketing/offer-model.md#you--we--exit) · what hosts keep after install: [kit/README.md](kit/README.md).
+**Two parts (pointers only):** priced change project + governing framework applied to the host, then ended. Exit leaves the specialized rules as the host's own docs and checks, without the Railkit name. [offer-model You / we / exit](project/marketing/offer-model.md#you--we--exit) · method: [kit/README.md](kit/README.md).
 
 **Full business hub:** [project/README.md](project/README.md).
 
@@ -38,7 +38,7 @@ Index only. Business surface detail: [project/README.md](project/README.md).
 
 | Path | Role | Who uses it |
 |------|------|-------------|
-| [kit/](kit/) | Governing framework (merged into host repos) | Customers after install → [kit/README.md](kit/README.md); maintainers edit here |
+| [kit/](kit/) | Governing framework (installed, then cut over with `--exit`) | Maintainers edit here. Hosts keep the result, not this brand |
 | [project/](project/) | Offer, USP, competition, consulting | Kit owners / sellers only (never copied to hosts) |
 | [examples/](examples/) | Practice / dogfood hosts | Kit owners (not installed into customers) |
 

@@ -10,7 +10,7 @@
 - **Ratchets:** extract and tighten; never raise ceilings to unblock ([architecture-ratchet.json](../../scripts/architecture/architecture-ratchet.json)) — instrument (check/tool that serves a rank) of [governing-priorities.md](governing-priorities.md) Ranks **4** and **6**.
 - **Breakpoints (defaults):** warn **400** lines; max **800** lines — see [Size ratchets and cost](#size-ratchets-breakpoints-and-cost).
 - **First pass ≠ mass shrink:** foundation **baselines** the ratchet; shrink **on contact** (when you open a file for real work), not a day-one sweep.
-- **Trend gates:** instruments of those ranks; sequence and customer depth: [governing-priorities.md](governing-priorities.md), [ADOPTION.md](../ADOPTION.md#correct-sequence).
+- **Trend gates:** instruments of those ranks; sequence and customer depth: [governing-priorities.md](governing-priorities.md), [ADOPTION.md](./governing-priorities.md).
 - **Layering:** [application-layering.md](../engineering/architecture/application-layering.md).
 
 ## Prefer / Avoid
@@ -31,7 +31,7 @@ Instruments of [governing-priorities.md](governing-priorities.md) Ranks **4** an
 
 **Ideal end state:** local + CI umbrella includes doc ownership (Rank **1**), file-size ratchet (Ranks **4/6**), unused-export / Knip-class (Ranks **4/6**, **clockable** under Rank **7** — deferred with owner + due date). Ceilings only tighten.
 
-**Order** (see [ADOPTION.md](../ADOPTION.md#correct-sequence)):
+**Order** (see [ADOPTION.md](./governing-priorities.md)):
 
 1. Document owners + `check:documentation*` — Rank **1**
 2. File-size ratchet + `check:architecture*` — Ranks **4**, **6**
@@ -55,7 +55,7 @@ Instruments of [governing-priorities.md](governing-priorities.md) Ranks **4** an
 | .NET | IDE analyzers / custom unused public API gates | Same |
 | Other | Host-chosen unused-export detector | Must be checkable locally + CI; else Rank **7** clock |
 
-Template for non-unused Rank **7** rows: [rank7-dated-queue.md](../../templates/rank7-dated-queue.md).
+Template for non-unused Rank **7** rows: [deferred-checks.md](deferred-checks.md).
 
 ### Architecture `roots` examples
 
@@ -75,11 +75,11 @@ In `architecture-budgets.json` (next to the architecture check scripts):
 | Persistence / SQL / ORM | Domain store / repository modules |
 | Shared API error shaping | One helper module |
 | Feature constants / copy | One owner module each |
-| TODO | _(add host rows during adopt)_ |
+| _(host row)_ | _(delete rows for layers this host does not have)_ |
 
 ## Size ratchets, breakpoints, and cost
 
-Owns the **reasoning** for file-size instruments (Ranks **4**/**6**). Token/commercial heuristics: [change-project-qualification.md](../../../project/consulting/change-project-qualification.md#token-spending-heuristics) (monorepo; not installed into hosts). Adopt timing: [ADOPTION.md](../ADOPTION.md#4-file-size-ratchets-foundation).
+Owns the **reasoning** for file-size instruments (Ranks **4**/**6**). Commercial token heuristics stay with the seller and are not part of this repo. Adopt timing during an engagement: [ADOPTION.md](./governing-priorities.md).
 
 ### What foundation does (and does not)
 

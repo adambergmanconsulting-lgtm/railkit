@@ -1,6 +1,6 @@
 # Adoption playbook
 
-**Purpose:** Move a chaotic host repo toward the Railkit governing framework. Owned by skill [`adopt`](../agents/skills/adopt.md).
+**Purpose:** Move a chaotic host repo toward one owner per task, proof on behavior changes, and budgets that only tighten. Owned by skill [`adopt`](../agents/skills/adopt.md).
 
 **Yardstick:** [governing-priorities.md](ops/governing-priorities.md) (ranks; higher wins). This sequence is the **procedure** that implements those ranks — not a peer checklist of unrelated locks.  
 **Code-first:** [CODE-FIRST.md](CODE-FIRST.md). Install: [00-QUICK-START.md](00-QUICK-START.md). Instruments (checks/tools that serve a rank): [code-quality-and-refactor.md](ops/code-quality-and-refactor.md), [testing-bar.md](ops/testing-bar.md).
@@ -62,7 +62,7 @@ Copy hubs, `agents/`, chosen adapter, scripts, example contract, workflow. Keep 
 
 ### 3. Document owners (foundation)
 
-For each Core owner row: promote the best existing host doc, or keep the Railkit template and specialize. At most one `.md` path per Open cell. Add `## Fast path` to deciding homes. Wire documentation checks into the host umbrella.
+For each Core owner row: promote the best existing host doc, or keep the template and specialize. At most one `.md` path per Open cell. Add `## Fast path` to deciding homes. Wire documentation checks into the host umbrella.
 
 Specialize [testing-bar.md](ops/testing-bar.md) **Host fill-in**: name **Preferred harness owner (how)** and **Preferred harness (one line)** when the host already has a suite grammar; leave blank only until known (then fill before the first behavior-changing on-contact win).
 
@@ -82,7 +82,7 @@ Pick the active delivery seam. Apply layering or hotspot extraction. **If behavi
 
 ### 7+. Ideal clock
 
-Unused-export / Knip-or-equivalent (`check:unused-export` JSON clock), UI rails, vendor automation — per [Gradual change](#gradual-change). Each deferred item needs owner + date. JSON clock covers unused-export only; other ideals use [rank7-dated-queue.md](../templates/rank7-dated-queue.md). Owner detail for gates: [code-quality-and-refactor.md](ops/code-quality-and-refactor.md#trend-to-better-mechanical).
+Unused-export (Knip-class on JS, or the host's equivalent tool) via `check:unused-export`, UI rails, vendor automation, per [Gradual change](#gradual-change). Each deferred item needs owner + date. The JSON clock covers unused-export only. Other ideals use [deferred-checks.md](ops/deferred-checks.md). Owner detail for gates: [code-quality-and-refactor.md](ops/code-quality-and-refactor.md#trend-to-better-mechanical).
 
 ## Exit checks
 
@@ -123,6 +123,24 @@ Do not report “done” from chat notes alone. Prefer an adopt receipt (example
 **should** — missing Fast path; Rank **7** queue missing owner or date; UI heuristics skipped on a UI host without a dated TODO; CI not wired to local checks.  
 **defer** — every Rank **7** instrument green day one; full vendor apply; living design page; perfect doc trim (still clock if named as ideal for this host).
 
-## Improve the kit after a host apply
+## Exit cutover
 
-Feed must/should friction into kit owners (not side notes): Quick Start / install script, this playbook, `scripts/lib/repo-root.js`, adapters, or governing ranks. Ratchets only tighten. Dogfood host in this monorepo: [`examples/first-host/`](../../examples/first-host/).
+When foundation and the working loop hold, the engagement ends. From the framework checkout (this does not recopy):
+
+```bash
+node kit/scripts/install/copy-kit-to-host.js --target <hostDir> --exit
+```
+
+The host then owns the result as its own docs and checks:
+
+- `scripts/railkit/` moves to `scripts/`
+- `check:railkit` is renamed to `check:quality`
+- This playbook, the quick start, and the adopt skill are removed
+- `docs/ops/adopt-receipt.md` stays, as a host record
+- The command fails if the host tree still contains the product name, `check:railkit`, or `scripts/railkit`
+
+Ranks, filled owners, skills, and the checks remain. They are no longer an install scaffold.
+
+## Improve the framework after a host apply
+
+Feed must/should friction into the framework checkout (not side notes): quick start, this playbook, `packs/js/lib/repo-root.js`, adapters, or governing ranks. Ratchets only tighten. Dogfood host: [`examples/first-host/`](../../examples/first-host/).

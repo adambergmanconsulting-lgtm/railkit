@@ -28,7 +28,7 @@ What the host must staff and accept for a **Go**. Commercial card: [../marketing
 | Named decider who can close dual homes on a short clock | Foundation never exits; dual homes stay dual |
 | Repo access + CI or merge-policy leverage | Trend gates never bind |
 | Active delivery seam this week | On-contact win is theater |
-| Accept leaving `kit/` in git; refuse raising ceilings to unblock | Offer fit fails (sell something else) |
+| Accept a native exit (rules stay, product name and install paths go); refuse raising ceilings to unblock | Offer fit fails (sell something else) |
 | Eng time on the seam (product when journeys conflict) | Expert invents canon the host will not own |
 | Security/compliance when deploy/secrets are tribal (as needed) | Tribal → code blocks without an egress decision |
 
@@ -42,7 +42,7 @@ Strong change-project hosts usually have:
 - A **named decider** for eng/product tradeoffs when docs disagree.
 - CI that already runs something (even weak) so **ratchets** (budgets that only tighten) can attach.
 - An **active delivery seam this week** so the on-contact win is real.
-- Willingness to keep `kit/` and **not raise ceilings** to unblock.
+- Willingness to keep the rules after a native exit and **not raise ceilings** to unblock.
 - Mess shaped as **dual homes** (two deciding docs for one thing), tribal how, fat files, tool dumps — not refusal to leave anything in git.
 
 ## Cannot take with this offer
