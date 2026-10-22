@@ -8,7 +8,7 @@ Session: pick one intent. Name the task in one sentence. Open only that owner Fa
 - offer / USP / marketing / competition / consulting -> project/README.md
 - why / causal chain -> project/marketing/why-railkit.md ; hosts -> kit/docs/WHY.md
 - qualify host / decline / tokens / reps -> project/consulting/change-project-qualification.md
-- recommended agent setups -> project/consulting/recommended-agent-setups.md
+- recommended agent setups / model niches -> project/consulting/recommended-agent-setups.md (Model tiering); kit/docs/DOCUMENTATION-PRINCIPLES.md (Model niches)
 - privacy / legality (repo + agents) -> project/consulting/privacy-and-legality.md
 - kit implement / fix / refactor -> kit/AGENTS.md -> kit/docs/CANONICAL-SOURCES.md (one row)
 - adopt / priorities -> kit/docs/ADOPTION.md ; kit/docs/ops/governing-priorities.md ; skill priorities-review

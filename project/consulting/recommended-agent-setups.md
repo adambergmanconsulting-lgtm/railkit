@@ -10,6 +10,7 @@
 - Engagement yardstick: [engagement-priorities.md](engagement-priorities.md) (Rank **5**).
 - Host gate conflicts: [governing-priorities.md](../../kit/docs/ops/governing-priorities.md) ; skill `priorities-review`.
 - **Default recommend:** [Rank 1 — Cursor + shipped adapter](#rank-1--cursor--shipped-adapter-default).
+- **Model niches:** [Model tiering](#model-tiering-within-rank-1-2) (Auto / Gemini draft / Grok 4.7 complex — host fill-in).
 - **Criteria:** [Scorecard](#scorecard).
 - **Do not:** fat always-on rule dumps; cloud agents before owners exist; selling one vendor as the product.
 - **Observability:** session rules + skills should load [AGENTS.md stop allowlist](../../kit/AGENTS.md#agent-stop-allowlist); agents auto-run must/should — prefer transcripts that show skill/`check:railkit` use over “shall I?” prompts.
@@ -105,17 +106,19 @@ Scores are relative (1–5, higher is better for that criterion on a Railkit-sha
 
 ## Model tiering (within Rank 1–2)
 
-Use a **stronger / slower / costlier** model for:
+Manual model picker only (session rules cannot switch the chat model). Ask the human to switch when the niche mismatches. This matrix is a **starting preference** for Cursor-shaped hosts, not a Railkit product claim ([usp-moat.md](../marketing/usp-moat.md#do-not-claim)). Hosts replace names when their editor or vendor set differs. Kit mirror: [DOCUMENTATION-PRINCIPLES.md](../../kit/docs/DOCUMENTATION-PRINCIPLES.md#model-niches-host-fill-in).
 
-- Inventory of dual homes
-- CANONICAL promotion decisions
-- `doc-review` / `layering-review` on hot seams
+| Niche | Prefer (Cursor example) |
+|-------|-------------------------|
+| **Default** (implement, fix, wire approved copy, CI, ordinary reviews) | Cursor **Auto** |
+| **Human-facing draft** (UI microcopy, SEO/meta, pitch, marketing/pricing/release prose) | **Gemini** |
+| **Complex** (hard multi-seam design, deep debug, dense architecture / dual-home inventory) | **Grok 4.7** |
 
-Use a **cheaper / faster** model for:
+Draft human-facing prose on the draft model, then return to **Auto** (or the host default) to apply into code or docs.
 
-- Mechanical renames after owners exist
-- Filling Fast path stubs from a decided table
-- Wiring check scripts when the pattern is already known
+Also use a **stronger** tier for: CANONICAL promotion decisions; `doc-review` / `layering-review` on hot seams.
+
+Use a **cheaper / faster** tier for: mechanical renames after owners exist; filling Fast path stubs from a decided table; wiring check scripts when the pattern is already known.
 
 Wrong-tier use (cheap model inventing owners; expensive model on typo PRs) wastes either quality or money.
 

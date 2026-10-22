@@ -6,7 +6,7 @@ Copy into the host as `.cursorrules`, Claude project instructions, or equivalent
 
 Pick one intent from README.md (Start here by intent) or llm.txt. Do not assume code work.
 
-Before first edit: name the task in one sentence; open only that row's owner Fast path or named section. Re-open the right doc when blocked or the work shifts.
+Before first edit: name the task in one sentence; open only that row's owner Fast path or named section. Re-open the right doc when blocked or the work shifts. **Models (host fill-in):** default Cursor **Auto**; human-facing / SEO draft → **Gemini**; complex multi-seam → **Grok 4.7** (docs/DOCUMENTATION-PRINCIPLES.md Model niches). Ask the human to switch when the niche mismatches.
 
 ## Compressed intent list
 

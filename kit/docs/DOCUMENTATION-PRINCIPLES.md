@@ -86,6 +86,18 @@ UI product strings are a different yardstick ([ui-naming.md](product/heuristics/
 
 Pick one intent from [README.md](../README.md#start-here-by-intent). Name the task in one sentence. Open only that owner Fast path before first edit. Re-situate when blocked, ambiguous, or the seam shifts.
 
+### Model niches (host fill-in)
+
+Manual picker only (rules cannot switch the chat model). Ask the human to switch when the niche mismatches. Replace vendor names to match the host editor. Starting Cursor-shaped example (edit in place; do not treat as a product claim):
+
+| Niche | Prefer |
+|-------|--------|
+| **Default** (implement, fix, wire approved copy, CI, ordinary reviews) | Cursor **Auto** |
+| **Human-facing draft** (UI microcopy, SEO/meta, pitch, marketing prose) | **Gemini** |
+| **Complex** (hard multi-seam design, deep debug, dense architecture) | **Grok 4.7** |
+
+Draft on the human-facing model; return to default to apply.
+
 ### Review situating (token bar)
 
 Shared Prefer/Avoid for review skills (`doc-review`, `layering-review`, `stability-review`, `ui-review`, `fit-review`, `priorities-review`, `engagement-review`):
