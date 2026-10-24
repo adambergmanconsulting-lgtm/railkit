@@ -35,3 +35,6 @@ Replace this section with branch names, resume flags, and E2E tiers. Keep the ru
 | Unit + e2e as Rank **2** proof vehicles | Merging behavior changes with red or skipped tests |
 | Path-triggered heavy jobs when the host grows | Running the universe on every docs typo |
 | Resume from a named gate after a green prefix | Re-running hours of green work without a resume story |
+| Authorized commit / push: stop `dev` first; foreign-WIP commit guards return **deny** + chat ask (Cursor hook `ask` breaks Run Everything) | Stacking commit beside next-dev; hook `permission: "ask"` for routine foreign-WIP gates |
+
+Occupancy detail: skill `shared-checkout`. Commit batching: skill `commit`.

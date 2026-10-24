@@ -8,6 +8,7 @@ Merge this folder into the host as `.cursor/` (rules + skills). Canonical skill 
 2. Copy `skills/*/SKILL.md` → host `.cursor/skills/`.
 3. Generate host `.cursorrules` from [templates/agent-session-rules.md](../../templates/agent-session-rules.md) (adjust paths if these files live under a subfolder).
 4. Keep always-on rules few and short: at most 3 with `alwaysApply: true`, at most 30 non-empty body lines. Check: `node check-always-on-rules.js --rules rules` from this folder, or `check:editor-rules` on a host.
+5. Optional: shared-checkout commit guard — [hooks/README.md](hooks/README.md) (`beforeShellExecution` returns **deny**, not `ask`).
 
 ## Rules map
 
