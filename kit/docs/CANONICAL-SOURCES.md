@@ -40,6 +40,7 @@
 |------|------------------------|
 | Add / change API or persistence boundary | [application-layering.md](engineering/architecture/application-layering.md) |
 | Structure / dedupe / size debt / unused exports | [code-quality-and-refactor.md](ops/code-quality-and-refactor.md) |
+| Consolidate public / SEO / pitch draft strings | [code-quality-and-refactor.md](ops/code-quality-and-refactor.md#draftable-user-facing-copy) |
 | Priority conflict (which owner vs which check vs depth) | [governing-priorities.md](ops/governing-priorities.md) |
 | Side effects / leftover forks / clocks | [ongoing-engineering-bar.md](ops/ongoing-engineering-bar.md) |
 | Unit / seam / e2e when behavior moves | [testing-bar.md](ops/testing-bar.md) |

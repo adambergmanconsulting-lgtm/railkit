@@ -5,6 +5,7 @@
 ## Fast path (read first)
 
 - **Dedupe:** one owner module for non-trivial logic/copy/config; reference, do not copy-paste.
+- **Draftable copy:** when the host iterates public / SEO / pitch / pricing-page strings with a specialist model, keep one token-cheap draft surface — see [Draftable user-facing copy](#draftable-user-facing-copy).
 - **Net simpler:** delete or inline unused scaffolding before wrapping; future shape needs a named owner destination.
 - **First-pass splits:** `parent/<feature>/` + `index.ts` (or language equivalent) in the same change; index re-exports only the external surface.
 - **Ratchets:** extract and tighten; never raise ceilings to unblock ([architecture-ratchet.json](../../packs/js/architecture/architecture-ratchet.json)) — instrument (check/tool that serves a rank) of [governing-priorities.md](governing-priorities.md) Ranks **4** and **6**.
@@ -25,6 +26,21 @@
 | Rank **1** owners before Knip-class depth (Rank **7**) | Skipping situating (opening the one right owner doc before edit) to bolt on dead-code tooling |
 | Baseline size ratchet, then extract on contact | Day-one sweep of every fat file; raising warn/max ceilings to “unblock” |
 | Seam-local edits under warnLines when possible | Treating size shrink as a hard “agents cannot edit” gate (it is cost and mess control, not a capability limit) |
+| One draft surface for public / SEO / pitch / pricing-page strings when the host iterates that copy with a specialist model | Scattering Prefer/Avoid + draftable strings across many modules so every draft pass reloads the world |
+| Amounts / brand / caps filled at wire time from host constants | Hardcoding prices or brand names in the draft surface when those already have owners |
+| Chrome Prefer/Avoid in [ui-naming.md](../product/heuristics/ui-naming.md); Legal long-form in components | Stuffing every in-app alert/button string into the public draft catalog |
+
+## Draftable user-facing copy
+
+**When:** the host has a real marketing / SEO / pitch iteration loop (not every host). **Why:** specialist-model draft sessions stay cheap when Prefer/Avoid + editable strings live in one openable surface.
+
+| Prefer | Avoid |
+|--------|--------|
+| One catalog or owner module: short Prefer/Avoid (`$bar` or equivalent) + string lanes; thin re-exports into the app | Mandating a JSON catalog on hosts with little public copy |
+| Placeholders for brand / prices / caps; wire from branding and pricing owners | Duplicating amount tables or brand tokens in the draft file |
+| Open that surface only for human-facing draft; default model applies | Attaching CONTENT + positioning + N `*copy` modules for every micro-edit |
+
+Chrome grammar stays in [ui-naming.md](../product/heuristics/ui-naming.md). Model niche: [DOCUMENTATION-PRINCIPLES.md](../DOCUMENTATION-PRINCIPLES.md#model-niches-host-fill-in). Rank **7** depth: adopt when the host feels draft-session token burn; do not invent the surface on day one of foundation.
 
 ## Trend to better (mechanical)
 
@@ -76,6 +92,7 @@ In `architecture-budgets.json` (next to the architecture check scripts):
 | Persistence / SQL / ORM | Domain store / repository modules |
 | Shared API error shaping | One helper module |
 | Feature constants / copy | One owner module each |
+| Public / SEO / pitch draft strings (when host iterates them) | One draft surface ([Draftable user-facing copy](#draftable-user-facing-copy)); thin re-exports |
 | _(host row)_ | _(delete rows for layers this host does not have)_ |
 
 ## Size ratchets, breakpoints, and cost
@@ -114,6 +131,7 @@ Configured in [`architecture-budgets.json`](../../packs/js/architecture/architec
 | Driver | Effect on spend |
 |--------|-----------------|
 | Dual homes / no Fast path (Rank **1**) | Highest early tax — wrong docs loaded every session |
+| Scattered draftable public copy (no draft surface) | Every specialist-model copy pass reloads Prefer/Avoid + N modules |
 | Fat hotspot **without** a ratchet | Repeated full-file loads + thrash; density beats raw LOC |
 | Fat hotspot **with** baseline + on-contact extract | One-time extract cost; later sessions stay seam-local |
 | Raising ceilings to unblock | Permanent tax increase; violates Rank **4** |

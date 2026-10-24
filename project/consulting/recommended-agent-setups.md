@@ -114,7 +114,7 @@ Manual model picker only (session rules cannot switch the chat model). Ask the h
 | **Human-facing draft** (UI microcopy, SEO/meta, pitch, marketing/pricing/release prose) | **Gemini** |
 | **Complex** (hard multi-seam design, deep debug, dense architecture / dual-home inventory) | **Grok 4.7** |
 
-Draft human-facing prose on the draft model, then return to **Auto** (or the host default) to apply into code or docs.
+Draft human-facing prose on the draft model, then return to **Auto** (or the host default) to apply into code or docs. When the host consolidates public / SEO / pitch strings into one draft surface, open that surface only for those edits ([code-quality-and-refactor.md](../../kit/docs/ops/code-quality-and-refactor.md#draftable-user-facing-copy)).
 
 Also use a **stronger** tier for: CANONICAL promotion decisions; `doc-review` / `layering-review` on hot seams.
 

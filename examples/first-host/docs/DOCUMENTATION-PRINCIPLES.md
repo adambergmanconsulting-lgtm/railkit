@@ -96,7 +96,7 @@ Manual picker only (rules cannot switch the chat model). Ask the human to switch
 | **Human-facing draft** (UI microcopy, SEO/meta, pitch, marketing prose) | **Gemini** |
 | **Complex** (hard multi-seam design, deep debug, dense architecture) | **Grok 4.7** |
 
-Draft on the human-facing model; return to default to apply. Do not treat model choice as a product claim.
+Draft on the human-facing model; return to default to apply. When the host has a public-copy draft surface, open that file only for those string edits ([code-quality-and-refactor.md](ops/code-quality-and-refactor.md#draftable-user-facing-copy)). Do not treat model choice as a product claim.
 
 ### Review situating (token bar)
 
