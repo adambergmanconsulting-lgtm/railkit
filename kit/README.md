@@ -40,7 +40,7 @@ Plain-language rules: [docs/DOCUMENTATION-PRINCIPLES.md — Plain language](docs
 
 1. **Authority and routing** — one start-here table; one deciding owner per task.
 2. **Thin editor adapters** — short must-dos and links; policy stays in `docs/` and `agents/skills/`.
-3. **Mechanical budgets** — limits that only get stricter; never raise ceilings to unblock.
+3. **Mechanical budgets** — limits that only get stricter; never raise ceilings to unblock; tighten when observed counts drop; each ship burns one debt unit when a release loop exists.
 4. **Layering** — thin shells; domain owns persistence and side effects.
 5. **Review skills** — structure, layering, stability, UI, fit against named yardsticks.
 6. **Code-first** — checks, CI, contracts, and agent procedures live in the repo.

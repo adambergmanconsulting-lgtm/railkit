@@ -31,9 +31,9 @@ If an agent is editing: **do the work** — fix must/should issues, run skills a
 ## Repo rules (after adopt)
 
 - **Dead code:** keep new helpers private unless a second file imports them in the same change. Delete or unexport when importers go away.
-- **Size budgets (ratchets):** extract and tighten; do not raise `architecture-ratchet` ceilings to pass CI.
+- **Size budgets (ratchets):** extract and tighten; do not raise `architecture-ratchet` ceilings to pass CI. When observed counts drop, lower the matching ceiling in the same change ([code-quality-and-refactor.md](docs/ops/code-quality-and-refactor.md#debt-pressure-and-exception-clocks)).
 - **Thin boundaries:** HTTP/UI shells parse and call; domain modules own persistence and side effects ([application-layering.md](docs/engineering/architecture/application-layering.md)).
-- **Wrap-up:** when exports change, run the unused-export check if it is wired; always run the architecture check (and doc checks when docs change) and fix in-tree. Rank order: [governing-priorities.md](docs/ops/governing-priorities.md).
+- **Wrap-up:** when exports change, run the unused-export check if it is wired; always run the architecture check (and doc checks when docs change) and fix in-tree. Tighten any ratchet that this change improved. Rank order: [governing-priorities.md](docs/ops/governing-priorities.md). Release cuts: one debt burn per [ci-flow.md](docs/ops/ci-flow.md#debt-pressure-rank-4--5) when the host wires it.
 
 ## Maintaining these rules
 

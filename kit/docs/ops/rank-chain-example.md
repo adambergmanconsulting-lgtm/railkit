@@ -47,11 +47,11 @@
 
 ## Link 4 — Non-loosening quality
 
-**Hold:** `architecture-budgets.json` `roots: ["apps","packages"]`; ratchet **baselined** (warn **400** / max **800** defaults); ceilings only tighten.
+**Hold:** `architecture-budgets.json` `roots: ["apps","packages"]`; ratchet **baselined** (warn **400** / max **800** defaults); ceilings only tighten; **tighten on drop** when observed falls.
 
-**Move:** Hotspot over warn → extract **on contact**; do not raise `maxLargestFileLines` to unblock. Not a day-one mass shrink ([Size ratchets](code-quality-and-refactor.md#size-ratchets-breakpoints-and-cost)).
+**Move:** Hotspot over warn → extract **on contact**; do not raise `maxLargestFileLines` to unblock. Not a day-one mass shrink ([Size ratchets](code-quality-and-refactor.md#size-ratchets-breakpoints-and-cost)). When a release loop exists, each cut burns one debt unit ([Debt pressure](ci-flow.md#debt-pressure-rank-4--5)).
 
-**Fail if inverted:** “Just bump the ceiling for this release” or “agents cannot work until every file is under 400.”
+**Fail if inverted:** “Just bump the ceiling for this release”; “leave slack for next time” after counts dropped; or “agents cannot work until every file is under 400.”
 
 ## Link 5 — Code-first how
 
@@ -76,6 +76,7 @@
 | Instrument | Clock |
 |------------|--------|
 | Knip-class | `check:unused-export` → `mode: queued`, owner=platform, due=YYYY-MM-DD — then `mode: knip` on umbrella |
+| Exception allowlists (deps / lint) | Named file + burn under debt pressure; undated forever row fails Rank **7** |
 | Full e2e on every PR | Dated row in [deferred-checks.md](deferred-checks.md) until harness cost is accepted |
 | Vendor apply for cloud DNS | Same template; inventory already exists (link 5) |
 

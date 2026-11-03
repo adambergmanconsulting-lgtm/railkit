@@ -9,6 +9,7 @@
 - **Net simpler:** delete or inline unused scaffolding before wrapping; future shape needs a named owner destination.
 - **First-pass splits:** `parent/<feature>/` + `index.ts` (or language equivalent) in the same change; index re-exports only the external surface.
 - **Ratchets:** extract and tighten; never raise ceilings to unblock ([architecture-ratchet.json](../../packs/js/architecture/architecture-ratchet.json)) — instrument (check/tool that serves a rank) of [governing-priorities.md](governing-priorities.md) Ranks **4** and **6**.
+- **Tighten on drop:** when observed counts fall, lower the matching ceiling in the same change ([Debt pressure and exception clocks](#debt-pressure-and-exception-clocks)).
 - **Breakpoints (defaults):** warn **400** lines; max **800** lines — see [Size ratchets and cost](#size-ratchets-breakpoints-and-cost).
 - **First pass ≠ mass shrink:** foundation **baselines** the ratchet; shrink **on contact** (when you open a file for real work), not a day-one sweep.
 - **Trend gates:** instruments of those ranks; sequence and customer depth: [governing-priorities.md](governing-priorities.md), [ADOPTION.md](../ADOPTION.md#correct-sequence).
@@ -25,6 +26,8 @@
 | One obvious entry per concern; remove superseded exports in the same change | Long-lived deprecated aliases for internal modules |
 | Rank **1** owners before Knip-class depth (Rank **7**) | Skipping situating (opening the one right owner doc before edit) to bolt on dead-code tooling |
 | Baseline size ratchet, then extract on contact | Day-one sweep of every fat file; raising warn/max ceilings to “unblock” |
+| Tighten the ceiling in the same change when observed drops | Leaving slack after a burn “for next time” |
+| Named, shrinkable exception lists burned under release debt pressure | Forever allowlists with no next-clear plan |
 | Seam-local edits under warnLines when possible | Treating size shrink as a hard “agents cannot edit” gate (it is cost and mess control, not a capability limit) |
 | One draft surface for public / SEO / pitch / pricing-page strings when the host iterates that copy with a specialist model | Scattering Prefer/Avoid + draftable strings across many modules so every draft pass reloads the world |
 | Amounts / brand / caps filled at wire time from host constants | Hardcoding prices or brand names in the draft surface when those already have owners |
@@ -105,7 +108,7 @@ Owns the **reasoning** for file-size instruments (Ranks **4**/**6**). Commercial
 |-------|-----------|-----|
 | Foundation (adopt step 4) | Run `check:architecture*`; **baseline** `architecture-ratchet.json` from current counts; wire local+CI | Stops silent growth; does **not** require mass shrink day one |
 | Working loop (on-contact) | When a hotspot is opened, extract toward warn; tighten ratchet ceilings | Real shrink happens on delivery seams, with Rank **2** proof if behavior moves |
-| Ongoing | Never raise ceilings to unblock; improve on contact; no sweeps | Rank **4** non-loosening |
+| Ongoing | Never raise ceilings to unblock; **tighten on drop**; improve on contact; no sweeps | Rank **4** non-loosening |
 
 **Fail if:** “First pass = delete/split everything over warn before agents touch the repo.” That inverts Rank **1** (owners first) and invents a myth that agents cannot edit large files.
 
@@ -135,8 +138,36 @@ Configured in [`architecture-budgets.json`](../../packs/js/architecture/architec
 | Fat hotspot **without** a ratchet | Repeated full-file loads + thrash; density beats raw LOC |
 | Fat hotspot **with** baseline + on-contact extract | One-time extract cost; later sessions stay seam-local |
 | Raising ceilings to unblock | Permanent tax increase; violates Rank **4** |
+| Leaving slack after observed counts drop | Soft raise; same Rank **4** fail as bumping the ceiling |
 
 **Order of leverage:** fix situating first, then baseline size, then shrink on contact. Size alone does not fix wrong-owner sessions.
+
+## Debt pressure and exception clocks
+
+**Owns:** tighten-on-drop for every ratchet class, and the rule that temporary exception lists are clocks.  
+**Does not own:** per-cut ship cadence Prefer/Avoid ([ci-flow.md](ci-flow.md#debt-pressure-rank-4--5)).
+
+Serves Rank **4** (non-loosening) and **6** (net-simpler). Cut loop that forces a burn: Rank **5** how in the host release script, bar in ci-flow.
+
+### Tighten on drop
+
+When a change lowers an **observed** ratchet count (files over warn, unused exports, unused locals, lint-debt counts, or any host-equivalent), **lower the matching ceiling in the same change**. Slack = observed under ceiling after a burn. Leaving slack is a soft raise.
+
+| Prefer | Avoid |
+|--------|--------|
+| Tighten every ratchet class that improved in this change | Only file-size tightens while other ceilings float |
+| Same-change ceiling edit next to the cleanup | “We will ratchet later” after counts already fell |
+
+### Exception lists are clocks
+
+Temporary allowlists (deprecated deps, lint suppressions, skipped gates) are Rank **7** depth until cleared: named, shrinkable, and burned under [debt pressure](ci-flow.md#debt-pressure-rank-4--5). An allowlist with no next-clear plan is a soft skip (fail Rank **7**).
+
+| Prefer | Avoid |
+|--------|--------|
+| Small named exception files with a burn path | Silent forever exceptions in config |
+| Prefer clearing a non-empty allowlist when blast radius fits | Adding rows without removing any |
+
+**Fail if:** the host treats “never raise ceilings” as enough while slack and allowlists grow every cut.
 
 ## Leftover paths
 

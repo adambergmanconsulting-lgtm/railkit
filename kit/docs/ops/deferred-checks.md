@@ -11,8 +11,9 @@
 | Check | Serves ranks | Owner | Due (YYYY-MM-DD) | Status |
 |-------|--------------|-------|------------------|--------|
 | Unused-export (Knip-class or the host's equivalent tool) | 4, 6, 7 | _(name)_ | _(date)_ | queued / shipped |
+| Release debt pressure (one named burn per cut) | 4, 5, 7 | _(name)_ | _(date)_ | queued / shipped / n/a |
 | Host unit and e2e on the same umbrella as local | 2, 4, 7 | _(name)_ | _(date)_ | queued / shipped |
 | UI heuristics + one ui-review | 7 | _(name)_ | _(date)_ | queued / n/a |
 | Vendor assert/apply | 5, 7 | _(name)_ | _(date)_ | queued / shipped |
 
-Yardstick: [governing-priorities.md](governing-priorities.md). JS pack unused-export command: `check:unused-export`.
+Yardstick: [governing-priorities.md](governing-priorities.md). Debt pressure Prefer/Avoid: [ci-flow.md](ci-flow.md#debt-pressure-rank-4--5). JS pack unused-export command: `check:unused-export`. Use **n/a** for debt pressure only when the host has no ship/tag loop yet.

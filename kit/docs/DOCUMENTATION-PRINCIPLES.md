@@ -74,6 +74,8 @@
 | Dual home | Two docs that both decide the same thing |
 | Instrument | A check, test, or tool that serves a priority rank |
 | Ratchet | A size or quality budget that may only get stricter |
+| Slack (ratchet) | Observed count under the ceiling; tighten the ceiling, do not leave soft headroom |
+| Debt pressure | Each ship burns one named exception clear, ratchet tighten, or deliberate upgrade |
 | On contact | When you open a file for real product work |
 | Dated / clocked queue | Deferred work with a named owner and due date |
 | Actor-agnostic | Same rules for humans and agents |

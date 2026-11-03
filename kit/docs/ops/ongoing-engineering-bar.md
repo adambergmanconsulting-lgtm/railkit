@@ -27,4 +27,4 @@
 
 ## Release and export hygiene (index)
 
-Unused exports, size budgets, pre-release static gates: host CI + [ci-flow.md](ci-flow.md). Skill: `stability-review`.
+Unused exports, size budgets, pre-release static gates: host CI + [ci-flow.md](ci-flow.md). Per-cut debt burn: [ci-flow.md Debt pressure](ci-flow.md#debt-pressure-rank-4--5). Tighten-on-drop and exception clocks: [code-quality-and-refactor.md](code-quality-and-refactor.md#debt-pressure-and-exception-clocks). Skill: `stability-review` (side effects); skill `release` (ship loop).

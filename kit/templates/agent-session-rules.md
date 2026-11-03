@@ -25,7 +25,7 @@ Before first edit: name the task in one sentence; open only that row's owner Fas
 ## Standing constraints
 
 - Policy in docs/ and agents/skills/; adapters stay thin (adapters/README.md).
-- Size budgets only get stricter; never raise ceilings to unblock.
+- Size budgets only get stricter; never raise ceilings to unblock; tighten when observed counts drop. Release cuts: one debt burn when the host wires debt pressure (docs/ops/ci-flow.md).
 - Repeatable how = scripts, infra, workflows, skills (docs/CODE-FIRST.md).
 - Plain text in kit docs and scripts (no emoji). Write plainly (docs/DOCUMENTATION-PRINCIPLES.md#plain-language).
 - Agents: do must/should work without asking; stop only on AGENTS.md stop allowlist (Prefer/Avoid forks, approach conflicts, dual homes, missing secrets). No “shall I?”. Rank 7 = dated queue + continue, not a soft skip.

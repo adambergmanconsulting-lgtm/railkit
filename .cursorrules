@@ -28,7 +28,7 @@ Before first edit: name the task in one sentence; open only that row's owner Fas
 ## Standing constraints
 
 - Policy in kit/docs/ and kit/agents/skills/; adapters stay thin (kit/adapters/README.md).
-- Size budgets only get stricter; never raise ceilings to unblock.
+- Size budgets only get stricter; never raise ceilings to unblock; tighten when observed counts drop. Release cuts: one debt burn when the host wires debt pressure (docs/ops/ci-flow.md).
 - Repeatable how = scripts, infra, workflows, skills (kit/docs/CODE-FIRST.md).
 - Plain text in kit docs and scripts (no emoji). Write plainly (kit/docs/DOCUMENTATION-PRINCIPLES.md#plain-language).
 - Hosts install kit/ only; never copy project/.

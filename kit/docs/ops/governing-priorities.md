@@ -53,6 +53,9 @@ Higher ranks are prerequisites, not peer preferences:
 | Local = CI umbrella ([ci-flow.md](ci-flow.md)) | **3**, **4** | Gates bind every editor the same way |
 | File-size / hotspot ratchet | **4**, **6** | Early mechanical support; **baseline then on-contact extract** (warn 400 / max 800 defaults) — cost/entropy, not “agents cannot work” |
 | Unused-export / Knip-class | **4**, **6** | Ideal depth; **clockable** under Rank **7** — kit ships `check:unused-export` (`queued` \| `knip`) |
+| Tighten-on-drop (all ratchet classes) | **4**, **6** | When observed falls, lower the ceiling in the same change — [code-quality-and-refactor.md](code-quality-and-refactor.md#debt-pressure-and-exception-clocks) |
+| Exception allowlists (deps, lint, skips) | **4**, **7** | Named shrinkable clocks; burned under release debt pressure |
+| Release debt pressure (one burn per cut) | **4**, **5** | Host release loop Prefer/Avoid — [ci-flow.md](ci-flow.md#debt-pressure-rank-4--5) |
 | Thin adapters / skills | **3**, **5** | Policy stays in docs; tools stay thin |
 | Tribal → code inventory | **5**, **7** | Inventory day one; full automation may be clocked |
 | Agent auto-loop | **3**, **5** | When an agent is the editor: run skills and same-turn must/should without permission prompts; pause only on [stop allowlist](../../AGENTS.md#agent-stop-allowlist) |
@@ -71,7 +74,8 @@ Use ranks to negotiate depth — not to invert them.
 |-----------|---------------------------|---------------|
 | No e2e harness yet | Full e2e suite in CI (owner + date) | Rank **2** proof on behavior changes (unit/seam or characterization + dated harness queue) |
 | Strict privacy / no cloud agents | Fancy agent setups | Rank **1**–**4** with human-led editing + local/CI gates |
-| Legacy size debt | Aggressive extract sweep | Rank **4** (baseline ceilings; never raise to unblock) |
+| Legacy size debt | Aggressive extract sweep | Rank **4** (baseline ceilings; never raise to unblock; tighten on drop) |
+| No release script yet | Debt-pressure doctor | Rank **4** on wired ratchets; add debt pressure when the ship loop exists |
 | Many packages | Org-wide Knip day one | Rank **1** router for the packages in scope first |
 | Date pressure | Ideal adopt steps 7–10 with clocks | Rank **1** situating and Rank **2** proof on the seam you touch |
 | Agent is the editor | — | Soft opt-out of must/should (“shall I?”, skip nudges); stop only on allowlist |
