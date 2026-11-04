@@ -94,11 +94,12 @@ Manual picker only (rules cannot switch the chat model). Ask the human to switch
 
 | Niche | Prefer |
 |-------|--------|
-| **Default** (implement, fix, wire approved copy, CI, ordinary reviews) | Cursor **Auto** |
+| **Default** (implement, fix, wire approved copy/UX, CI, ordinary reviews) | Cursor **Auto** |
+| **UX & human psychology** (mental models, cognitive load, trust/anxiety, user flow critique — reasoning only, not code implementation) | **Claude Opus** |
 | **Human-facing draft** (UI microcopy, SEO/meta, pitch, marketing prose) | **Gemini** |
 | **Complex** (hard multi-seam design, deep debug, dense architecture) | **Grok 4.7** |
 
-Draft on the human-facing model; return to default to apply. When the host has a public-copy draft surface, open that file only for those string edits ([code-quality-and-refactor.md](ops/code-quality-and-refactor.md#draftable-user-facing-copy)).
+Reason about UX or draft copy on the niche model first; return to default (**Auto**) to implement. When the host has a public-copy draft surface, open that file only for those string edits ([code-quality-and-refactor.md](ops/code-quality-and-refactor.md#draftable-user-facing-copy)).
 
 ### Review situating (token bar)
 

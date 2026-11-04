@@ -10,7 +10,7 @@
 - Engagement yardstick: [engagement-priorities.md](engagement-priorities.md) (Rank **5**).
 - Host gate conflicts: [governing-priorities.md](../../kit/docs/ops/governing-priorities.md) ; skill `priorities-review`.
 - **Default recommend:** [Rank 1 — Cursor + shipped adapter](#rank-1--cursor--shipped-adapter-default).
-- **Model niches:** [Model tiering](#model-tiering-within-rank-1-2) (Auto / Gemini draft / Grok 4.7 complex — host fill-in).
+- **Model niches:** [Model tiering](#model-tiering-within-rank-1-2) (Auto / Claude Opus UX reasoning / Gemini draft / Grok 4.7 complex — host fill-in).
 - **Criteria:** [Scorecard](#scorecard).
 - **Do not:** fat always-on rule dumps; cloud agents before owners exist; selling one vendor as the product.
 - **Observability:** session rules + skills should load [AGENTS.md stop allowlist](../../kit/AGENTS.md#agent-stop-allowlist); agents auto-run must/should — prefer transcripts that show skill/`check:railkit` use over “shall I?” prompts.
@@ -110,11 +110,12 @@ Manual model picker only (session rules cannot switch the chat model). Ask the h
 
 | Niche | Prefer (Cursor example) |
 |-------|-------------------------|
-| **Default** (implement, fix, wire approved copy, CI, ordinary reviews) | Cursor **Auto** |
+| **Default** (implement, fix, wire approved copy/UX, CI, ordinary reviews) | Cursor **Auto** |
+| **UX & human psychology** (mental models, cognitive load, trust/anxiety, user flow critique — reasoning only, not code implementation) | **Claude Opus** |
 | **Human-facing draft** (UI microcopy, SEO/meta, pitch, marketing/pricing/release prose) | **Gemini** |
 | **Complex** (hard multi-seam design, deep debug, dense architecture / dual-home inventory) | **Grok 4.7** |
 
-Draft human-facing prose on the draft model, then return to **Auto** (or the host default) to apply into code or docs. When the host consolidates public / SEO / pitch strings into one draft surface, open that surface only for those edits ([code-quality-and-refactor.md](../../kit/docs/ops/code-quality-and-refactor.md#draftable-user-facing-copy)).
+Reason about UX on Opus, or draft human-facing prose on Gemini, then return to **Auto** (or the host default) to apply into code or docs. When the host consolidates public / SEO / pitch strings into one draft surface, open that surface only for those edits ([code-quality-and-refactor.md](../../kit/docs/ops/code-quality-and-refactor.md#draftable-user-facing-copy)).
 
 Also use a **stronger** tier for: CANONICAL promotion decisions; `doc-review` / `layering-review` on hot seams.
 
